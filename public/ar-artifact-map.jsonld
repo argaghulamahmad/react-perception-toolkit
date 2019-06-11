@@ -1,0 +1,97 @@
+[
+  {
+    "@context": "https://schema.googleapis.com/",
+    "@type": "ARArtifact",
+    "arTarget": {
+      "@type": "Barcode",
+      "text": "012345678912"
+    },
+    "arContent": {
+      "@type": "WebPage",
+      "url": "http://localhost:8080/demo/arga/products-barcode/product1.html",
+      "name": "Product 1",
+      "description": "This is a product with a barcode",
+      "image": "http://localhost:8080/demo/arga/products-barcode/product1.png"
+    }
+  },
+
+  {
+    "@context": "https://schema.googleapis.com/",
+    "@type": "ARArtifact",
+    "arTarget": {
+      "@type": "Barcode",
+      "text": "012345678929"
+    },
+    "arContent": {
+      "@type": "WebPage",
+      "url": "http://localhost:8080/demo/arga/products-barcode/product2.html",
+      "name": "Product 2",
+      "description": "This is a product with a barcode",
+      "image": "http://localhost:8080/demo/arga/products-barcode/product2.png"
+    }
+  },
+
+  {
+    "@context": "https://schema.googleapis.com/",
+    "@type": "ARArtifact",
+    "arTarget": {
+      "@type": "Barcode",
+      "text": "012345678936"
+    },
+    "arContent": {
+      "@type": "WebPage",
+      "url": "http://localhost:8080/demo/arga/products-barcode/product3.html",
+      "name": "Product 3",
+      "description": "This is a product with a barcode",
+      "image": "http://localhost:8080/demo/arga/products-barcode/product3.png"
+    }
+  },
+
+  {
+    "@context": "http://schema.org",
+    "@type": "ARArtifact",
+    "arTarget": [{
+      "@type": "Barcode",
+      "text": "http://localhost:8080/demo/dynamic-discovery/products/product1.html"
+    }],
+    "arContent": {
+      "@type": "WebPage",
+      "url": "http://localhost:8080/demo/arga/products-qr/product1.html",
+      "name": "Dell Latitude E5450 Core i5 5300U 8GB 128GB",
+      "description": "Laptop Mid Entry Dell",
+      "image": "https://imagerouter.tokopedia.com/img/700/catalog/2017/7/12/20723472/20723472_dec7f8eb-d6fb-4ff0-9812-ab1ad86ae6e5.png"
+    }
+  },
+
+  {
+    "@context": "http://schema.org",
+    "@type": "ARArtifact",
+    "arTarget": [{
+      "@type": "Barcode",
+      "text": "http://localhost:8080/demo/dynamic-discovery/products/product2.html"
+    }],
+    "arContent": {
+      "@type": "WebPage",
+      "url": "http://localhost:8080/demo/arga/products-qr/product2.html",
+      "name": "Mac Book Pro",
+      "description": "Laptop High end dari Apple",
+      "image": "https://ecs7.tokopedia.net/img/cache/700/catalog/2017/8/28/20723472/20723472_a42828e4-257d-4180-b2dc-a041283e17e1.png"
+    }
+  },
+
+  {
+    "@context": "http://schema.org",
+    "@type": "ARArtifact",
+    "arTarget": [{
+      "@type": "Barcode",
+      "text": "http://localhost:8080/demo/dynamic-discovery/products/product3.html"
+    }],
+    "arContent": {
+      "@type": "WebPage",
+      "url": "http://localhost:8080/demo/arga/products-qr/product3.html",
+      "name": "Iphone X",
+      "description": "High End Smartphone dari Apple",
+      "image": "https://imagerouter.tokopedia.com/img/700/attachment/2019/5/6/50364945/50364945_9893ff85-12b9-4359-948f-3f1c3e3578ff.jpg"
+    }
+  }
+]
