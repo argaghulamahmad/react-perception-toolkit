@@ -10,6 +10,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="/node_modules/perception-toolkit/styles/perception-toolkit.css">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -23,6 +24,23 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.googleapis.com/",
+        "@type": "ARArtifact",
+        "arTarget": {
+          "@type": "Barcode",
+          "text": "Inline Barcode"
+        },
+        "arContent": {
+          "@type": "WebPage",
+          "url": "http://example.com/item.html",
+          "name": "Item name",
+          "description": "A short description explaining a little more about the item.",
+          "image": "http://example.com/images/item-image.jpg"
+        }
+      }
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
