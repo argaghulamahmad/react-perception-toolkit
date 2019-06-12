@@ -1,3 +1,5 @@
+/*
+TODO delete this file because this code has relocated to scanner component
 function init() {
     window.PerceptionToolkit = window.PerceptionToolkit || {};
 }
@@ -19,3 +21,4 @@ export default async function () {
         console.log('perceptionToolkit installed!', {module});
     })
 };
+*/

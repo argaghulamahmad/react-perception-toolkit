@@ -1,27 +1,27 @@
 import React, {Component} from 'react';
 
-import importPerceptionToolKit from '../../initPerceptionToolkit';
-
 class Scanner extends Component {
     constructor(props) {
         super(props);
         this.state = {
             targetText: 'test'
         }
-    }
+    };
 
     componentDidMount() {
-        importPerceptionToolKit();
-
         const cardContainer = document.body.querySelector('.container');
         const startButton = document.getElementById('get-started');
 
         console.log('didMount', this);
 
         const addEventListeners = () => {
+            console.log('addEventListeners', this);
+
             const {Events, Elements} = window.PerceptionToolkit;
 
             window.addEventListener(Events.PerceivedResults, (evt) => {
+                console.log('evt', this);
+
                 const {found, lost} = evt.detail;
 
                 window.evt = evt;
@@ -83,7 +83,7 @@ class Scanner extends Component {
             });
         };
 
-        const init = async () => {
+        const initScanner = async () => {
             window.PerceptionToolkit = window.PerceptionToolkit || {};
             window.PerceptionToolkit.config = {
                 debugLevel: 'verbose',
@@ -98,7 +98,26 @@ class Scanner extends Component {
             };
         };
 
-        init();
+        const importPerceptionToolkit = async () => {
+            await import('../../perception-toolkit/lib/src/polyfill/barcode-detector')
+                .then(module => {
+                    window.BarcodeDetector = class CustomBarcodeDetectorPolyfill extends module.BarcodeDetectorPolyfill {
+                        constructor() {
+                            // hardcode the script for the worker to run for now
+                            // TODO: add webpack worker loader to handle dynamically named worker script
+                            super('/barcode-detector_worker.js');
+                        }
+                    }
+                });
+            await import('../../perception-toolkit/lib/perception-toolkit/bootstrap')
+                .then(module => {
+                    console.log('perceptionToolkit installed!', {module});
+                })
+        };
+
+        // noinspection JSIgnoredPromiseFromCall
+        importPerceptionToolkit();
+        initScanner();
     }
 
     render() {
