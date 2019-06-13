@@ -235,9 +235,10 @@ async function onCaptureFrame(evt) {
 
     //get one of several markers then display it to user
     let mark = markers[0];
-    if (mark.rawValue !== 'undefined') {
-        console.log(mark)
+    if (typeof(mark) !== 'undefined') {
         alert(mark.rawValue);
+    } else {
+        alert('Item not recognized');
     }
 
     for (const marker of markers) {
