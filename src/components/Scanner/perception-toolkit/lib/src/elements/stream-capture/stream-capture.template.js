@@ -89,6 +89,9 @@ export const html = `<svg id="reticle" viewBox="0 0 133 100"
   <rect id="reticle-box" width="133" height="100" x="0" y="0"
       fill="rgba(0,0,0,0.4)" mask="url(#reticle-cut-out)" />
 </svg>
+<!--
+//disable close button on stream-capture
 <button id="close">Close</button>
+-->
 `;
 //# sourceMappingURL=stream-capture.template.js.map
