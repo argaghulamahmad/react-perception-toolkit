@@ -216,6 +216,7 @@ async function onCaptureFrame(evt) {
     const { detectionMode, imgData } = detail;
     // TODO: Expand with other types besides barcodes.
     const markers = await detectBarcodes(imgData, { polyfillPrefix });
+    console.log(markers);
     for (const marker of markers) {
         const markerAlreadyDetected = detectedMarkers.has(marker.rawValue);
         // Update the last time for this marker.
