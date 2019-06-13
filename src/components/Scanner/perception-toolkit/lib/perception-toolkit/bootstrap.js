@@ -78,6 +78,7 @@ const load = new Promise(async (resolve) => {
  * Initialize the experience.
  */
 async function initializeExperience() {
+    console.log('initialize experience', this);
     const supported = await load;
     if (!supported) {
         const { hideLoader } = await import('./loader.js');
@@ -123,6 +124,7 @@ function addCardToPage({ msg = '', cls = '' }) {
 }
 // Bootstrap.
 (async function () {
+    console.log('bootstrap', this);
     const supported = await load;
     const { hideLoader, showLoader } = await import('./loader.js');
     const { config } = window.PerceptionToolkit;

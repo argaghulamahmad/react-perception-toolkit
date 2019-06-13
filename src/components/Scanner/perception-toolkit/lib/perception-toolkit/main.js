@@ -51,6 +51,7 @@ const attemptDetection = detectBarcodes(new ImageData(1, 1), { polyfillPrefix })
  * Starts the user onboarding.
  */
 export async function initialize(opts) {
+    console.log('initialize opts', this);
     const onboarding = document.querySelector(OnboardingCard.defaultTagName);
     if (!onboarding) {
         beginDetection(opts);
@@ -66,6 +67,7 @@ export async function initialize(opts) {
  * Initializes the main behavior.
  */
 async function beginDetection({ detectionMode = 'passive', sitemapUrl }) {
+    console.log('begin detection', this);
     try {
         // Wait for the faked detection to resolve.
         await attemptDetection;
@@ -85,6 +87,7 @@ async function beginDetection({ detectionMode = 'passive', sitemapUrl }) {
  * Whenever we find nearby content, show it
  */
 async function updateContentDisplay(contentDiff) {
+    console.log('updateContentDisplay', this);
     const { cardContainer } = window.PerceptionToolkit.config;
     // Prevent multiple cards from showing.
     if (!cardContainer || cardContainer.hasChildNodes()) {
@@ -101,6 +104,7 @@ async function updateContentDisplay(contentDiff) {
  * Handle Marker discovery
  */
 async function onMarkerFound(evt) {
+    console.log('onMarkerFound', this);
     const { detail } = evt;
     const marker = { type: 'qrcode', value: detail };
     // Update the UI
@@ -120,6 +124,7 @@ const capture = new StreamCapture();
  * Creates the stream an initializes capture.
  */
 async function createStreamCapture(detectionMode) {
+    console.log('createStreamCapture', this);
     if (detectionMode === 'passive') {
         capture.captureRate = 600;
     }
@@ -181,6 +186,7 @@ async function createStreamCapture(detectionMode) {
     }
 }
 export function close() {
+    console.log('close', this);
     capture.stop();
     capture.remove();
     hideOverlay();
@@ -199,6 +205,7 @@ let isProcessingCapture = false;
  * @param evt The Custom Event containing the captured frame data.
  */
 async function onCaptureFrame(evt) {
+    console.log('onCaptureFrame', this);
     // Prevent overloading the capture process.
     if (isProcessingCapture) {
         return;
@@ -256,6 +263,7 @@ async function onCaptureFrame(evt) {
  * Handles connectivity change for the user.
  */
 function onConnectivityChanged() {
+    console.log('onConnectivityChanged', this);
     const connected = navigator.onLine;
     const capture = document.body.querySelector(StreamCapture.defaultTagName);
     if (!capture) {
