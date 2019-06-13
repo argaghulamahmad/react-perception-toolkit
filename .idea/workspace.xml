@@ -1,8 +1,348 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83c92675-d3bd-4076-8851-4b0e0e196a62" name="Default Changelist" comment="Refactor Code&#10;Import perception toolkit directly into Scanner component.">
+    <list default="true" id="83c92675-d3bd-4076-8851-4b0e0e196a62" name="Default Changelist" comment="Delete unused js file&#10;The js file name is initPerceptionToolkit.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Scanner/Scanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/Scanner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/build/bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/build/dynamic-loader/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/build/dynamic-loader/loader.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/build/polyfills.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/defs/barcode.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/defs/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/defs/lib.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/defs/marker.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/defs/wasm-module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/demo/barcode-listing-linked.jsonld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/demo/barcode-listing-sitemap.jsonld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/demo/images/step1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/demo/images/step2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/demo/images/step3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/demo/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/demo/other.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/bundled/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/bundled/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/bundled/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/bundled/loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/bundled/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/bundled/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/bundled/meaning-maker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/bundled/meaning-maker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/bundled/onboarding.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/bundled/onboarding.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/bundled/pt-chunk-2c2752b3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/bundled/pt-chunk-2c2752b3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/bundled/pt-chunk-bc29be45.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/bundled/pt-chunk-bc29be45.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/bundled/pt-chunk-d3dcaf5d.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/bundled/pt-chunk-d3dcaf5d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/barcode.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/barcode.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/barcode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/schema/barcode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/barcode.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/barcode.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/lib.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/lib.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/lib.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/lib.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/lib.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/lib.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/marker.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/marker.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/marker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/marker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/marker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/marker.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/wasm-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/wasm-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/wasm-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/wasm-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/defs/wasm-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/wasm-module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/bootstrap.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/bootstrap.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/bootstrap.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/events.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/events.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/events.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/events.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/events.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/loader.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/loader.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/loader.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/loader.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/main.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/main.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/main.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/meaning-maker.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/meaning-maker.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/meaning-maker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/meaning-maker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/meaning-maker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/meaning-maker.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/onboarding.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/onboarding.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/onboarding.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/onboarding.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/onboarding.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/onboarding.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/polyfills/barcode-detector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/polyfills/barcode-detector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/polyfills/barcode-detector_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/polyfills/barcode-detector_test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/polyfills/barcode-detector_worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/polyfills/barcode-detector_worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/artifact-dealer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/artifact-dealer.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/artifact-dealer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/artifact-dealer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/artifact-dealer.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/artifact-dealer.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/artifact-decoder.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/artifact-decoder.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/artifact-decoder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/artifact-decoder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/artifact-decoder.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/artifact-decoder.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/artifact-loader.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/artifact-loader.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/artifact-loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/artifact-loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/artifact-loader.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/artifact-loader.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/schema/ar-artifact.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/schema/ar-artifact.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/schema/ar-artifact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/schema/ar-artifact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/schema/ar-artifact.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/schema/ar-artifact.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/schema/barcode.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/schema/barcode.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/schema/barcode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/barcode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/schema/barcode.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/schema/barcode.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/schema/geo-coordinates.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/schema/geo-coordinates.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/schema/geo-coordinates.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/schema/geo-coordinates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/schema/geo-coordinates.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/schema/geo-coordinates.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/schema/json-ld.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/schema/json-ld.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/schema/json-ld.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/schema/json-ld.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/schema/json-ld.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/schema/json-ld.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/stores/artifact-store.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/stores/artifact-store.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/stores/artifact-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/stores/artifact-store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/stores/artifact-store.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/stores/artifact-store.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/stores/local-artifact-store.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/stores/local-artifact-store.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/stores/local-artifact-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/stores/local-artifact-store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/stores/local-artifact-store.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/stores/local-artifact-store.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/stores/local-marker-store.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/stores/local-marker-store.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/stores/local-marker-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/stores/local-marker-store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/stores/local-marker-store.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/artifacts/stores/local-marker-store.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/detectors/barcode.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/detectors/barcode.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/detectors/barcode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/detectors/barcode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/detectors/barcode.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/detectors/barcode.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/detectors/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/detectors/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/detectors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/detectors/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/detectors/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/detectors/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/action-button/action-button.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/action-button/action-button.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/action-button/action-button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/action-button/action-button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/action-button/action-button.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/action-button/action-button.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/action-button/action-button.template.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/action-button/action-button.template.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/action-button/action-button.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/action-button/action-button.template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/action-button/action-button.template.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/action-button/action-button.template.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/card/card.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/card/card.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/card/card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/card/card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/card/card.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/card/card.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/card/card.template.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/card/card.template.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/card/card.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/card/card.template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/card/card.template.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/card/card.template.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/dot-loader/dot-loader.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/dot-loader/dot-loader.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/dot-loader/dot-loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/dot-loader/dot-loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/dot-loader/dot-loader.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/dot-loader/dot-loader.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/dot-loader/dot-loader.template.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/dot-loader/dot-loader.template.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/dot-loader/dot-loader.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/dot-loader/dot-loader.template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/dot-loader/dot-loader.template.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/dot-loader/dot-loader.template.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/no-support-card/no-support-card.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/no-support-card/no-support-card.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/no-support-card/no-support-card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/no-support-card/no-support-card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/no-support-card/no-support-card.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/no-support-card/no-support-card.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/no-support-card/no-support-card.template.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/no-support-card/no-support-card.template.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/no-support-card/no-support-card.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/no-support-card/no-support-card.template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/no-support-card/no-support-card.template.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/no-support-card/no-support-card.template.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/onboarding-card/onboarding-card.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/onboarding-card/onboarding-card.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/onboarding-card/onboarding-card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/onboarding-card/onboarding-card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/onboarding-card/onboarding-card.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/onboarding-card/onboarding-card.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/onboarding-card/onboarding-card.template.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/onboarding-card/onboarding-card.template.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/onboarding-card/onboarding-card.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/onboarding-card/onboarding-card.template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/onboarding-card/onboarding-card.template.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/onboarding-card/onboarding-card.template.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/overlay/overlay.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/overlay/overlay.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/overlay/overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/overlay/overlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/overlay/overlay.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/overlay/overlay.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/overlay/overlay.template.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/overlay/overlay.template.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/overlay/overlay.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/overlay/overlay.template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/overlay/overlay.template.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/overlay/overlay.template.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/stream-capture/stream-capture.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/stream-capture/stream-capture.template.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.template.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/stream-capture/stream-capture.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/stream-capture/stream-capture.template.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.template.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/polyfill/barcode-detector.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/polyfill/barcode-detector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/polyfill/barcode-detector.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/polyfill/barcode-detector_worker.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector_worker.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/polyfill/barcode-detector_worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector_worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/polyfill/barcode-detector_worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector_worker.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/barcode.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/barcode.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/barcode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/barcode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/barcode.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/barcode.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/device-support.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/device-support.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/device-support.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/device-support.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/device-support.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/device-support.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/geolocation.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/geolocation.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/geolocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/geolocation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/geolocation.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/geolocation.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/get-user-media.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/get-user-media.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/get-user-media.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/get-user-media.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/get-user-media.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/get-user-media.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/intersection-observer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/intersection-observer.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/intersection-observer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/intersection-observer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/intersection-observer.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/intersection-observer.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/wasm.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/wasm.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/wasm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/wasm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/support/wasm.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/support/wasm.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/clamp.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/clamp.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/clamp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/clamp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/clamp.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/clamp.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/double-raf.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/double-raf.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/double-raf.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/double-raf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/double-raf.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/double-raf.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/environment-camera.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/environment-camera.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/environment-camera.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/environment-camera.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/environment-camera.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/environment-camera.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/fade.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/fade.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/fade.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/fade.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/fade.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/fade.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/fire.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/fire.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/fire.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/fire.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/fire.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/fire.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/flat-map.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/flat-map.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/flat-map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/flat-map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/flat-map.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/flat-map.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/flat.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/flat.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/flat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/flat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/flat.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/flat.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/generate-marker-id.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/generate-marker-id.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/generate-marker-id.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/generate-marker-id.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/generate-marker-id.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/generate-marker-id.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/geolocation-async.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/geolocation-async.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/geolocation-async.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/geolocation-async.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/geolocation-async.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/geolocation-async.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/inject-script.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/inject-script.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/inject-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/inject-script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/inject-script.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/inject-script.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/is-image-data.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/is-image-data.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/is-image-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/is-image-data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/is-image-data.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/is-image-data.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/load-images.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/load-images.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/load-images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/load-images.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/load-images.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/load-images.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/logger.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/logger.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/logger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/logger.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/logger.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/resize-image.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/resize-image.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/resize-image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/resize-image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/resize-image.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/resize-image.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/speech.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/speech.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/speech.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/speech.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/speech.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/speech.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/timeout.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/timeout.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/timeout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/timeout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/timeout.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/timeout.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/vibrate.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/vibrate.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/vibrate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/vibrate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/vibrate.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/vibrate.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/perception-toolkit/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/perception-toolkit/bootstrap.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/perception-toolkit/events.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/perception-toolkit/loader.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/perception-toolkit/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/perception-toolkit/meaning-maker.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/perception-toolkit/onboarding.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/artifacts/artifact-dealer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/artifacts/artifact-decoder.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/artifacts/artifact-loader.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/artifacts/schema/ar-artifact.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/artifacts/schema/barcode.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/artifacts/schema/geo-coordinates.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/artifacts/schema/json-ld.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/artifacts/stores/artifact-store.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/artifacts/stores/local-artifact-store.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/artifacts/stores/local-marker-store.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/detectors/barcode.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/detectors/barcode_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/detectors/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/action-button/action-button.template.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/action-button/action-button.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/action-button/action-button_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/card/card.template.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/card/card.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/card/card_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/dot-loader/dot-loader.template.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/dot-loader/dot-loader.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/dot-loader/dot-loader_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/no-support-card/no-support-card.template.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/no-support-card/no-support-card.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/no-support-card/no-support-card_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/onboarding-card/onboarding-card.template.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/onboarding-card/onboarding-card.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/onboarding-card/onboarding-card_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/overlay/overlay.template.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/overlay/overlay.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/overlay/overlay_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/stream-capture/stream-capture.template.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/stream-capture/stream-capture.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/elements/stream-capture/stream-capture_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/polyfill/barcode-detector.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/polyfill/barcode-detector_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/polyfill/barcode-detector_worker.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/support/barcode.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/support/barcode_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/support/device-support.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/support/device-support_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/support/geolocation.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/support/geolocation_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/support/get-user-media.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/support/get-user-media_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/support/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/support/intersection-observer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/support/intersection-observer_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/support/wasm.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/support/wasm_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/clamp.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/clamp_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/double-raf.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/environment-camera.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/environment-camera_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/fade.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/fade_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/fire.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/fire_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/flat-map.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/flat-map_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/flat.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/flat_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/generate-marker-id.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/geolocation-async.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/geolocation-async_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/inject-script.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/inject-script_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/is-image-data.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/is-image-data_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/load-images.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/load-images_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/logger.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/logger_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/resize-image.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/resize-image_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/speech.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/timeout.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/timeout_test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/src/utils/vibrate.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/styles/perception-toolkit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/styles/perception-toolkit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/third_party/idb-keyval/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/third_party/idb-keyval/idb-keyval-iife.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/third_party/intersection-observer/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/third_party/intersection-observer/intersection-observer-polyfill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/third_party/zxing/LGPL_EXCEPTION.Qt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/third_party/zxing/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/third_party/zxing/LICENSE.LodePNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/third_party/zxing/LICENSE.Qt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/third_party/zxing/LICENSE.ZXing" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/third_party/zxing/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/third_party/zxing/zxing_reader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/third_party/zxing/zxing_reader.wasm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/tsconfig.docs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/perception-toolkit/tslint.json" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,68 +356,50 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/ar-artifact-map.jsonld">
+        <entry file="file://$PROJECT_DIR$/src/components/Scanner/Scanner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="305">
+              <caret line="47" column="27" lean-forward="true" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
+              <folding>
+                <element signature="e#2615#2691#0" expanded="true" />
+                <element signature="e#2758#2834#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Scanner/Scanner.js">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
-              <folding>
-                <element signature="e#2615#2691#0" expanded="true" />
-                <element signature="e#2758#2834#0" expanded="true" />
-                <element signature="e#4126#4127#0" expanded="true" />
-                <element signature="e#4219#4220#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="336">
+              <caret line="16" column="76" lean-forward="true" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/bootstrap.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/styles/perception-toolkit.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="118" column="28" selection-start-line="118" selection-start-column="28" selection-end-line="118" selection-end-column="28" />
-              <folding>
-                <element signature="e#608#670#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-5">
+              <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/main.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/polyfills/barcode-detector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-              <folding>
-                <element signature="e#608#669#0" expanded="true" />
-                <element signature="e#1576#1626#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="99" column="28" lean-forward="true" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/initPerceptionToolkit.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="62" lean-forward="true" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/card/card.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-792">
-              <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+            <state relative-caret-position="195">
+              <caret line="20" column="48" lean-forward="true" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -93,17 +415,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>context.</find>
-      <find>Barcode</find>
-      <find>BarcodeDete</find>
-      <find>paths</find>
-      <find>postmessage</find>
-      <find>pathPrefix</find>
-      <find>self</find>
-      <find>babel</find>
-      <find>eslint</find>
-      <find>tokopedia home</find>
-      <find>bootstrap.</find>
       <find>perception-toolkit/</find>
       <find>barcode</find>
       <find>artifactSources</find>
@@ -123,7 +434,23 @@
       <find>container</find>
       <find>INFO [Detect]:</find>
       <find>prevent</find>
+      <find>window</find>
+      <find>bootstrap</find>
+      <find>../src/</find>
+      <find>loader.js</find>
+      <find>elements</find>
+      <find>./src</find>
+      <find>../src</find>
+      <find>dealer</find>
+      <find>src/perception-toolkit/lib/src</find>
+      <find>barcode-detector</find>
+      <find>barcode</find>
     </findStrings>
+    <replaceStrings>
+      <replace>this</replace>
+      <replace>src/perception-toolkit/lib/src</replace>
+      <replace>./src</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/perception-toolkit</dir>
     </dirStrings>
@@ -145,7 +472,6 @@
         <option value="$PROJECT_DIR$/config/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/perception-toolkit/lib/src/polyfill/barcode-detector.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/third_party/idb-keyval/idb-keyval-iife.min.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/containers/Home/Home.js" />
@@ -154,10 +480,26 @@
         <option value="$PROJECT_DIR$/src/importPerceptionToolkit.js" />
         <option value="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/main.js" />
         <option value="$PROJECT_DIR$/src/perception-toolkit/perception-toolkit/meaning-maker.ts" />
-        <option value="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/bootstrap.js" />
         <option value="$PROJECT_DIR$/public/ar-artifact-map.jsonld" />
-        <option value="$PROJECT_DIR$/src/components/Scanner/Scanner.js" />
         <option value="$PROJECT_DIR$/src/initPerceptionToolkit.js" />
+        <option value="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/bootstrap.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/scripts/bootstrap.js.map" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/scripts/bootstrap.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/scripts/events.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/scripts/loader.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/scripts/main.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/scripts/meaning-maker.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/scripts/onboarding.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/bootstrap.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/loader.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/main.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/meaning-maker.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/onboarding.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/events.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/Scanner.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/polyfills/barcode-detector.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -189,20 +531,18 @@
             <path>
               <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="third_party" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="third_party" type="462c0819:PsiDirectoryNode" />
-              <item name="idb-keyval" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
@@ -219,97 +559,40 @@
               <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Scanner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Scanner" type="462c0819:PsiDirectoryNode" />
+              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Scanner" type="462c0819:PsiDirectoryNode" />
+              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Scanner" type="462c0819:PsiDirectoryNode" />
+              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
+              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic-loader" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="defs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="bundled" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="detectors" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -320,7 +603,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/burger-basics-06-finished" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -333,15 +616,16 @@
     <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Scanner/perception-toolkit" />
+      <recent name="$PROJECT_DIR$/src/components/Scanner/scripts" />
+      <recent name="$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/public/static/js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/containers" />
       <recent name="$PROJECT_DIR$/public" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/public/static/js" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -386,7 +670,8 @@
       <workItem from="1560237647266" duration="11336000" />
       <workItem from="1560302593107" duration="210000" />
       <workItem from="1560305682162" duration="1451000" />
-      <workItem from="1560308085929" duration="22426000" />
+      <workItem from="1560308085929" duration="25310000" />
+      <workItem from="1560389190741" duration="6524000" />
     </task>
     <task id="LOCAL-00001" summary="Yarn add router-dom">
       <created>1560155677938</created>
@@ -458,22 +743,29 @@
       <option name="project" value="LOCAL" />
       <updated>1560333416462</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Delete unused js file&#10;The js file name is initPerceptionToolkit.">
+      <created>1560333482514</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1560333482514</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55892000" />
+    <option name="totallyTimeSpent" value="65300000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25317854" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2521834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299285" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32890704" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -482,37 +774,14 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2951992" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.30643514" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.29111338" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.28804904" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2498618" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32890704" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="GraphQL" order="8" />
-      <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2951992" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.30643514" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -569,251 +838,10 @@
     <MESSAGE value="Imitate demo arga from previous PoC in this project" />
     <MESSAGE value="Refactor Code&#10;Convert default function syntax to arrow function." />
     <MESSAGE value="Refactor Code&#10;Import perception toolkit directly into Scanner component." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor Code&#10;Import perception toolkit directly into Scanner component." />
+    <MESSAGE value="Delete unused js file&#10;The js file name is initPerceptionToolkit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete unused js file&#10;The js file name is initPerceptionToolkit." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/src/elements/onboarding-card/onboarding-card.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="164" column="5" lean-forward="true" selection-start-line="164" selection-start-column="5" selection-end-line="164" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/perception-toolkit/onboarding.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-968">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/importPerceptionToolkit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="e#16#17#0" expanded="true" />
-            <element signature="e#81#82#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Scanner/Scanner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="55" column="39" lean-forward="true" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/perception-toolkit/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
-          <caret line="71" column="50" lean-forward="true" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="50" />
-          <folding>
-            <element signature="e#609#670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/perception-toolkit/loader.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/demo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="104" column="8" lean-forward="true" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/bundled/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/loader.d.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/meaning-maker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/src/artifacts/stores/artifact-store.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/src/detectors/index.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/src/detectors/barcode.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="58" column="7" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/src/artifacts/artifact-decoder.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/perception-toolkit/lib/src/artifacts/artifact-loader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding>
-            <element signature="e#608#664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/perception-toolkit/lib/perception-toolkit/meaning-maker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/src/artifacts/artifact-loader.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="e#609#665#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/src/artifacts/artifact-dealer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1337">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding>
-            <element signature="e#609#655#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/node/fs.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="1288" column="13" selection-start-line="1288" selection-start-column="13" selection-end-line="1288" selection-end-column="13" />
-          <folding>
-            <element signature="e#26#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/build/dynamic-loader/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-861">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/defs/barcode.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/defs/wasm-module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/bootstrap.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/support/device-support.d.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/support/device-support.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/fire.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-89" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/fire.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/events.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/events.d.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="17898" column="11" selection-start-line="17898" selection-start-column="11" selection-end-line="17898" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/loader.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/overlay/overlay.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3680">
-          <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/main.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es2015.collection.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -875,13 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/artifact-dealer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/card/card.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-792">
@@ -896,44 +917,243 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/initPerceptionToolkit.js" />
     <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+        <state relative-caret-position="48">
+          <caret line="16" column="61" lean-forward="true" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
           <folding>
-            <element signature="e#608#669#0" expanded="true" />
             <element signature="e#1576#1626#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/polyfill/barcode-detector.d.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/bootstrap.js.map">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/utils/fire.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="17" column="47" selection-start-line="17" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/bootstrap.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/scripts/bootstrap.d.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/loader.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/scripts/bootstrap.js.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/perception-toolkit/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="118" column="28" selection-start-line="118" selection-start-column="28" selection-end-line="118" selection-end-column="28" />
+        <state relative-caret-position="210">
+          <caret line="55" column="51" lean-forward="true" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
           <folding>
             <element signature="e#608#670#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/initPerceptionToolkit.js">
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/elements/onboarding-card/onboarding-card.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/artifact-dealer.d.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/src/artifacts/artifact-dealer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="62" lean-forward="true" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
+        <state relative-caret-position="462">
+          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <element signature="e#608#674#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/defs/barcode.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/defs/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/defs/lib.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/lib/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="50" lean-forward="true" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding>
+            <element signature="e#608#648#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/perception-toolkit/styles/perception-toolkit.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/loader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+          <folding>
+            <element signature="e#608#668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/meaning-maker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-790">
+          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/onboarding.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding>
+            <element signature="e#608#716#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/polyfills/barcode-detector_test.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/polyfills/barcode-detector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/src/utils/is-image-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/fade.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding>
+            <element signature="e#608#669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="16" column="62" lean-forward="true" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/events.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/loader.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/main.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/meaning-maker.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/onboarding.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/polyfills/barcode-detector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="99" column="28" lean-forward="true" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="48" lean-forward="true" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/styles/perception-toolkit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/Scanner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+        <state relative-caret-position="305">
+          <caret line="47" column="27" lean-forward="true" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
           <folding>
             <element signature="e#2615#2691#0" expanded="true" />
             <element signature="e#2758#2834#0" expanded="true" />
-            <element signature="e#4126#4127#0" expanded="true" />
-            <element signature="e#4219#4220#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="76" lean-forward="true" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
         </state>
       </provider>
     </entry>

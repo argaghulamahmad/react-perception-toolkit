@@ -99,17 +99,17 @@ class Scanner extends Component {
         };
 
         const importPerceptionToolkit = async () => {
-            await import('../../perception-toolkit/lib/src/polyfill/barcode-detector')
+            await import('./perception-toolkit/lib/src/polyfill/barcode-detector')
                 .then(module => {
                     window.BarcodeDetector = class CustomBarcodeDetectorPolyfill extends module.BarcodeDetectorPolyfill {
                         constructor() {
                             // hardcode the script for the worker to run for now
                             // TODO: add webpack worker loader to handle dynamically named worker script
-                            super('/barcode-detector_worker.js');
+                            super('barcode-detector_worker.js');
                         }
                     }
                 });
-            await import('../../perception-toolkit/lib/perception-toolkit/bootstrap')
+            await import('./perception-toolkit/lib/perception-toolkit/bootstrap')
                 .then(module => {
                     console.log('perceptionToolkit installed!', {module});
                 })
