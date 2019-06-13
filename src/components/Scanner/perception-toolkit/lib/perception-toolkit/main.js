@@ -25,11 +25,11 @@ import { supportsEnvironmentCamera } from '../src/utils/environment-camera.js';
 import { fire } from '../src/utils/fire.js';
 import { DEBUG_LEVEL, enableLogLevel, log } from '../src/utils/logger.js';
 import { vibrate } from '../src/utils/vibrate.js';
+import { MeaningMaker } from './meaning-maker.js';
+import { cameraAccessDenied, markerChanges, markerDetect } from './events.js';
 export { vibrate } from '../src/utils/vibrate.js';
 export { Card } from '../src/elements/card/card.js';
 export { ActionButton } from '../src/elements/action-button/action-button.js';
-import { MeaningMaker } from './meaning-maker.js';
-import { cameraAccessDenied, markerChanges, markerDetect } from './events.js';
 const detectedMarkers = new Map();
 const meaningMaker = new MeaningMaker();
 // Register custom elements.
