@@ -6,6 +6,7 @@ import {cameraAccessDenied, captureClosed, captureStopped, markerChanges} from '
 
 /*
 * TODO create a new interface replace the existing window interface so that we can use it in the Scanner component
+* TODO send captured content to a react component
 * */
 
 const deviceNotSupported = 'pt.devicenotsupported';
@@ -37,7 +38,7 @@ if (window.PerceptionToolkit.config.onload) {
 }
 
 /**
- * Perform a device support test, then load the loader & onboarding.
+ * Perform a device support test, then load the loader & on boarding.
  */
 const load = new Promise(async (resolve) => {
     console.log('loadObject', this);
@@ -67,13 +68,7 @@ async function initializeExperience() {
     if (!supported) {
         const deviceNotSupportedEvt = fire(deviceNotSupported, window);
         if (!deviceNotSupportedEvt.defaultPrevented) {
-            console.log('Sorry, this browser does not support the required features')
-            /*
-            TODO implement this method
-            addCardToPage({
-                cls: 'no-support',
-                msg: 'Sorry, this browser does not support the required features',
-            });*/
+            alert('Sorry, this browser does not support the required features')
         }
         return;
     }
@@ -87,11 +82,6 @@ async function initializeExperience() {
     window.PerceptionToolkit.Functions.closeExperience = close;
     initialize({detectionMode});
 }
-
-/*
-TODO implement this method
-function addCardToPage({ msg = '', cls = '' }) {
-}*/
 
 /*
     Bootstrap function
@@ -118,12 +108,6 @@ function addCardToPage({ msg = '', cls = '' }) {
         // card here.
         if (!supported) {
             alert('Sorry, this browser does not support the required features');
-            /*
-            TODO create method add this info to the scanner component
-            addCardToPage({
-                cls: 'no-support',
-                msg: 'Sorry, this browser does not support the required features',
-            });*/
             return;
         }
 
@@ -131,11 +115,8 @@ function addCardToPage({ msg = '', cls = '' }) {
         initializeExperience();
     });
 
-    /*
-    TODO implement add evt listener to react close button
-    // When captureclose is fired, show the button again.
     window.addEventListener(captureStopped, () => {
-        getStarted.classList.add(buttonVisibilityClass);
-    });*/
+        console.log('captureStopped', this)
+    });
 })();
 //# sourceMappingURL=bootstrap.js.map
