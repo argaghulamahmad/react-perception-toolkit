@@ -21,10 +21,7 @@ class Scanner extends Component {
                 debugLevel: 'verbose',
                 button: startButton,
                 cardContainer: cardContainer,
-                callback: openUrl,
-                onload() {
-                    console.log('initScanner')
-                }
+                callback: openUrl
             };
         };
 
@@ -45,9 +42,10 @@ class Scanner extends Component {
                 })
         };
 
-        // noinspection JSIgnoredPromiseFromCall
-        importPerceptionToolkit();
-        initScanner();
+        let importedPerceptionToolkit = importPerceptionToolkit();
+        let ignitedScanner = initScanner();
+        console.log('importPerceptionToolkit', importedPerceptionToolkit);
+        console.log('initScanner', ignitedScanner);
     }
 
     render() {
