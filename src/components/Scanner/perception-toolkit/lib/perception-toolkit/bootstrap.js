@@ -77,7 +77,7 @@ async function initializeExperience() {
     }
 
     const {config} = window.PerceptionToolkit;
-    const {detectionMode = 'active'} = config;
+    const {detectionMode = 'passive'} = config;
 
     const {initialize, close} = await import('./main.js');
 
