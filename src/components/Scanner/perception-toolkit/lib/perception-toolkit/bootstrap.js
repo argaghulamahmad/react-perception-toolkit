@@ -4,6 +4,10 @@ import {WasmSupport} from '../src/support/wasm.js';
 import {fire} from '../src/utils/fire.js';
 import {cameraAccessDenied, captureClosed, captureStopped, markerChanges} from './events.js';
 
+/*
+* TODO create a new interface replace the existing window interface so that we can use it in the Scanner component
+* */
+
 const deviceNotSupported = 'pt.devicenotsupported';
 window.PerceptionToolkit.config = window.PerceptionToolkit.config || {};
 
@@ -37,8 +41,6 @@ if (window.PerceptionToolkit.config.onload) {
  */
 const load = new Promise(async (resolve) => {
     console.log('load object', this);
-
-    const {config} = window.PerceptionToolkit;
 
     // Detect the necessary support.
     const deviceSupport = new DeviceSupport();
