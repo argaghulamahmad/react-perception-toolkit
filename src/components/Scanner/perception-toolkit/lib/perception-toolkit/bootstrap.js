@@ -13,7 +13,7 @@ const deviceNotSupported = 'pt.devicenotsupported';
 window.PerceptionToolkit.config = window.PerceptionToolkit.config || {};
 
 /*
-Expose events
+Expose events.
 */
 window.PerceptionToolkit.Events = {
     CameraAccessDenied: cameraAccessDenied,
@@ -38,7 +38,7 @@ if (window.PerceptionToolkit.config.onload) {
 }
 
 /**
- * Perform a device support test, then load the loader & on boarding.
+ * Perform a device support test.
  */
 const load = new Promise(async (resolve) => {
     console.log('loadObject', this);
@@ -64,6 +64,7 @@ const load = new Promise(async (resolve) => {
 async function initializeExperience() {
     console.log('initializeExperience', this);
 
+    //Check result of device support test.
     const supported = await load;
     if (!supported) {
         const deviceNotSupportedEvt = fire(deviceNotSupported, window);
@@ -75,7 +76,6 @@ async function initializeExperience() {
 
     const {config} = window.PerceptionToolkit;
     const {detectionMode = 'passive'} = config;
-
     const {initialize, close} = await import('./main.js');
 
     // Now the experience has begun, update the closeExperience fn.
@@ -104,8 +104,7 @@ async function initializeExperience() {
 
     // When getStarted is clicked, load the experience.
     getStarted.addEventListener('click', (e) => {
-        // If the button was visible and the user clicked it, show the no support
-        // card here.
+        // If the button was visible and the user clicked it, alert the no support message here.
         if (!supported) {
             alert('Sorry, this browser does not support the required features');
             return;
