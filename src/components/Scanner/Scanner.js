@@ -42,10 +42,8 @@ class Scanner extends Component {
                 })
         };
 
-        let importedPerceptionToolkit = importPerceptionToolkit();
-        let ignitedScanner = initScanner();
-        console.log('importPerceptionToolkit', importedPerceptionToolkit);
-        console.log('initScanner', ignitedScanner);
+        importPerceptionToolkit().then(console.log('importPerceptionToolkit', this));
+        initScanner().then(console.log('initScanner', this));
     }
 
     render() {
