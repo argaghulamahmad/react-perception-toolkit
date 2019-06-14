@@ -28,7 +28,7 @@ Expose functions.
 window.PerceptionToolkit.Functions = {
     initializeExperience,
     closeExperience() {
-        // Replaced when main.ts has loaded.
+        console.log('closeExperience')
     }
 };
 
