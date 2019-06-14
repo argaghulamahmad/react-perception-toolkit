@@ -13,6 +13,12 @@ const deviceNotSupported = 'pt.devicenotsupported';
 window.PerceptionToolkit.config = window.PerceptionToolkit.config || {};
 
 /*
+* Expose captured content.*/
+window.PerceptionToolkit.CapturedContent = {
+    detail: null
+};
+
+/*
 Expose events.
 */
 window.PerceptionToolkit.Events = {

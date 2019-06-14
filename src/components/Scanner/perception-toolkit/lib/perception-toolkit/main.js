@@ -73,12 +73,14 @@ Handle Marker discovery
 async function onMarkerFound(evt) {
     console.log('onMarkerFound', evt, this);
 
-    //display barcodeContent to the user
+    // Display barcodeContent to the user.
     let barcodeContent = evt.detail;
     console.log('barcodeContent', barcodeContent);
     alert(barcodeContent);
 
-    //TODO try to save barcodeContent at window object
+    // Save barcode content so that the react component can access it.
+    window.PerceptionToolkit.CapturedContent.detail = barcodeContent;
+
     //TODO implement handle marker discovery, as an example connect this function with a web service
     //TODO passing function from react component to this function to add above functionality
 
