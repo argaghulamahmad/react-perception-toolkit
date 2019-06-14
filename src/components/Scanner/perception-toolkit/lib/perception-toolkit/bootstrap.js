@@ -40,7 +40,7 @@ if (window.PerceptionToolkit.config.onload) {
  * Perform a device support test, then load the loader & onboarding.
  */
 const load = new Promise(async (resolve) => {
-    console.log('load object', this);
+    console.log('loadObject', this);
 
     // Detect the necessary support.
     const deviceSupport = new DeviceSupport();
@@ -61,7 +61,7 @@ const load = new Promise(async (resolve) => {
  * Initialize the experience.
  */
 async function initializeExperience() {
-    console.log('initialize experience', this);
+    console.log('initializeExperience', this);
 
     const supported = await load;
     if (!supported) {
@@ -97,7 +97,7 @@ function addCardToPage({ msg = '', cls = '' }) {
     Bootstrap function
 */
 (async function () {
-    console.log('new modified bootstrap function', this);
+    console.log('iifBootstrap', this);
 
     const supported = await load;
     const {config} = window.PerceptionToolkit;

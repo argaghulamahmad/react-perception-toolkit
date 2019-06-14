@@ -43,7 +43,7 @@ const attemptDetection = detectBarcodes(new ImageData(1, 1), {polyfillPrefix});
  * Initialize
  */
 export async function initialize(opts) {
-    console.log('initialize opts', this);
+    console.log('initializeMain', this);
     beginDetection(opts);
 }
 
@@ -51,7 +51,7 @@ export async function initialize(opts) {
  * Begin Detection
  */
 async function beginDetection({detectionMode = 'passive'}) {
-    console.log('begin detection', this);
+    console.log('beginDetection', this);
     try {
         // Wait for the faked detection to resolve.
         await attemptDetection;
