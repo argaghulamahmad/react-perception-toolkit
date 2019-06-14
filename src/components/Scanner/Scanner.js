@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {openUrl} from "./services/services";
 
 class Scanner extends Component {
     constructor(props) {
@@ -87,11 +88,11 @@ class Scanner extends Component {
             window.PerceptionToolkit = window.PerceptionToolkit || {};
             window.PerceptionToolkit.config = {
                 debugLevel: 'verbose',
-                detectionMode: 'active',
+                detectionMode: 'passive',
                 button: startButton,
                 cardContainer: cardContainer,
-                onboarding: false,
                 artifactSources: [],
+                callback: openUrl,
                 onload() {
                     addEventListeners();
                 }

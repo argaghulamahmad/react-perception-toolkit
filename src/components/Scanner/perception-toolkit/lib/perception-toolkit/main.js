@@ -68,6 +68,11 @@ async function beginDetection({detectionMode = 'passive'}) {
 }
 
 /*
+* Check whether the variable is a function.
+* */
+const isFunction = func => func && {}.toString.call(func) === '[object Function]';
+
+/*
 Handle Marker discovery
 */
 async function onMarkerFound(evt) {
@@ -77,6 +82,12 @@ async function onMarkerFound(evt) {
     let barcodeContent = evt.detail;
     console.log('barcodeContent', barcodeContent);
     alert(barcodeContent);
+
+    // Run the callback function.
+    let {callbackFunction} = window.PerceptionToolkit.Functions;
+    if (isFunction(callbackFunction)) {
+        callbackFunction(barcodeContent);
+    }
 
     // Save barcode content so that the react component can access it.
     window.PerceptionToolkit.CapturedContent.detail = barcodeContent;

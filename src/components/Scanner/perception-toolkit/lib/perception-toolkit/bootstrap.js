@@ -9,6 +9,7 @@ import {cameraAccessDenied, captureClosed, captureStopped, markerChanges} from '
 * TODO send captured content to a react component
 * */
 
+const {config} = window.PerceptionToolkit;
 const deviceNotSupported = 'pt.devicenotsupported';
 window.PerceptionToolkit.config = window.PerceptionToolkit.config || {};
 
@@ -36,7 +37,8 @@ window.PerceptionToolkit.Functions = {
     initializeExperience,
     closeExperience() {
         console.log('closeExperience')
-    }
+    },
+    callbackFunction: config.callback
 };
 
 if (window.PerceptionToolkit.config.onload) {
