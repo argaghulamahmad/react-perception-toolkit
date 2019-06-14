@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83c92675-d3bd-4076-8851-4b0e0e196a62" name="Default Changelist" comment="Tidy up some block comment">
+    <list default="true" id="83c92675-d3bd-4076-8851-4b0e0e196a62" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/bootstrap.js" afterDir="false" />
     </list>
@@ -19,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/bootstrap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+            <state relative-caret-position="156">
+              <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
                 <element signature="e#4025#4026#0" expanded="true" />
@@ -337,7 +337,7 @@
       <workItem from="1560412630500" duration="768000" />
       <workItem from="1560413785465" duration="8334000" />
       <workItem from="1560473953601" duration="2390000" />
-      <workItem from="1560477071447" duration="11456000" />
+      <workItem from="1560477071447" duration="11492000" />
     </task>
     <task id="LOCAL-00001" summary="Yarn add router-dom">
       <created>1560155677938</created>
@@ -535,11 +535,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560496393265</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Tidy up some comments">
+      <created>1560496917892</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1560496917892</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99152000" />
+    <option name="totallyTimeSpent" value="99188000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -613,7 +620,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Yarn add perception-toolkit" />
     <MESSAGE value="Init perception-toolkit on 'index.js'" />
     <MESSAGE value="Import perception-toolkit polyfill" />
     <MESSAGE value="Update public directory&#10;And add perception-toolkit lib to src." />
@@ -638,7 +644,8 @@
     <MESSAGE value="Fix some typos on some console log&#10;For tracing purpose." />
     <MESSAGE value="Implement closeExperience function" />
     <MESSAGE value="Alert some warning message to user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alert some warning message to user" />
+    <MESSAGE value="Tidy up some comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tidy up some comments" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/events.js" />
@@ -950,8 +957,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+        <state relative-caret-position="156">
+          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
             <element signature="e#4025#4026#0" expanded="true" />

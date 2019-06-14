@@ -40,7 +40,7 @@ if (window.PerceptionToolkit.config.onload) {
 /**
  * Perform a device support test.
  */
-const load = new Promise(async (resolve) => {
+const deviceSupportTest = new Promise(async (resolve) => {
     console.log('loadObject', this);
 
     // Detect the necessary support.
@@ -65,7 +65,7 @@ async function initializeExperience() {
     console.log('initializeExperience', this);
 
     //Check result of device support test.
-    const supported = await load;
+    const supported = await deviceSupportTest;
     if (!supported) {
         const deviceNotSupportedEvt = fire(deviceNotSupported, window);
         if (!deviceNotSupportedEvt.defaultPrevented) {
@@ -89,7 +89,7 @@ async function initializeExperience() {
 (async function () {
     console.log('iifBootstrap', this);
 
-    const supported = await load;
+    const supported = await deviceSupportTest;
     const {config} = window.PerceptionToolkit;
     const {buttonVisibilityClass = 'visible'} = config;
     const getStarted = config.button ? config.button :
