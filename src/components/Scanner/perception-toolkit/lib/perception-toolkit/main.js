@@ -1,51 +1,42 @@
 import {detectBarcodes} from '../src/detectors/barcode.js';
-
-/*import { ActionButton } from '../src/elements/action-button/action-button.js';
-import { Card } from '../src/elements/card/card.js';
-import {OnboardingCard} from '../src/elements/onboarding-card/onboarding-card.js';*/
-
-import {DotLoader} from '../src/elements/dot-loader/dot-loader.js';
 import {hideOverlay, showOverlay} from '../src/elements/overlay/overlay.js';
 import {closeEvent, frameEvent, StreamCapture} from '../src/elements/stream-capture/stream-capture.js';
 import {supportsEnvironmentCamera} from '../src/utils/environment-camera.js';
 import {fire} from '../src/utils/fire.js';
 import {DEBUG_LEVEL, enableLogLevel, log} from '../src/utils/logger.js';
 import {vibrate} from '../src/utils/vibrate.js';
-
-/*
-import { MeaningMaker } from './meaning-maker.js';
-*/
-
 import {cameraAccessDenied, markerChanges, markerDetect} from './events.js';
 
 export {vibrate} from '../src/utils/vibrate.js';
-/*export { Card } from '../src/elements/card/card.js';
-export { ActionButton } from '../src/elements/action-button/action-button.js';*/
 
 const detectedMarkers = new Map();
 
 /*
-const meaningMaker = new MeaningMaker();
+Register custom elements.
 */
-
-// Register custom elements.
 customElements.define(StreamCapture.defaultTagName, StreamCapture);
-/*customElements.define(Card.defaultTagName, Card);
-customElements.define(ActionButton.defaultTagName, ActionButton);*/
 
-// Register events.
+/*
+Register events.
+*/
 window.addEventListener(frameEvent, onCaptureFrame);
 window.addEventListener('offline', onConnectivityChanged);
 window.addEventListener('online', onConnectivityChanged);
 
-// Log errors by default.
+/*
+Log errors by default.
+*/
 enableLogLevel(DEBUG_LEVEL.ERROR);
 
-// While the onboarding begins, attempt a fake detection. If the polyfill is
-// necessary, or the detection fails, we should find out.
+/*
+While the on boarding begins, attempt a fake detection. If the polyfill is
+necessary, or the detection fails, we should find out.
+*/
 const polyfillPrefix = window.PerceptionToolkit.config.root || '';
 
-// TODO: Attempt the correct detection based on the target types.
+/*
+TODO: Attempt the correct detection based on the target types.
+*/
 const attemptDetection = detectBarcodes(new ImageData(1, 1), {polyfillPrefix});
 
 /**
@@ -53,35 +44,17 @@ const attemptDetection = detectBarcodes(new ImageData(1, 1), {polyfillPrefix});
  */
 export async function initialize(opts) {
     console.log('initialize opts', this);
-
-    /*const onboarding = document.querySelector(OnboardingCard.defaultTagName);
-    if (!onboarding) {
-        beginDetection(opts);
-        return;
-    }
-    // When onboarding is finished, start the stream and remove the loader.
-    onboarding.addEventListener(OnboardingCard.onboardingFinishedEvent, () => {
-        onboarding.remove();
-        beginDetection(opts);
-    });*/
-
     beginDetection(opts);
 }
 
 /**
  * Begin Detection
  */
-async function beginDetection({detectionMode = 'passive', sitemapUrl}) {
+async function beginDetection({detectionMode = 'passive'}) {
     console.log('begin detection', this);
     try {
         // Wait for the faked detection to resolve.
         await attemptDetection;
-
-        /*// Initialize MeaningMaker
-        await meaningMaker.init();
-        if (sitemapUrl) {
-            await meaningMaker.loadArtifactsFromJsonldUrl(new URL(sitemapUrl, document.URL));
-        }*/
 
         // Create the stream.
         await createStreamCapture(detectionMode);
@@ -92,44 +65,25 @@ async function beginDetection({detectionMode = 'passive', sitemapUrl}) {
 
 /**
  * Whenever we find nearby content, show it
- * TODO modify this
- */
-/*async function updateContentDisplay(contentDiff) {
-    console.log('updateContentDisplay', this);
-    const {cardContainer} = window.PerceptionToolkit.config;
-    // Prevent multiple cards from showing.
-    if (!cardContainer || cardContainer.hasChildNodes()) {
-        return;
-    }
-    for (const {content} of contentDiff.found) {
-        // Create a card for every found marker.
-        const card = new Card();
-        card.src = content;
-        cardContainer.appendChild(card);
-    }
+ * TODO implement updateContentDisplay function
+ async function updateContentDisplay(contentDiff) {
 }*/
 
 /*
- * Handle Marker discovery
- * TODO modify this
- */
-/*async function onMarkerFound(evt) {
-    console.log('onMarkerFound', this);
-    const {detail} = evt;
-    const marker = {type: 'qrcode', value: detail};
+Handle Marker discovery
+*/
+async function onMarkerFound(evt) {
+    console.log('onMarkerFound', evt, this);
 
-    // Update the UI
-    const contentDiffs = await meaningMaker.markerFound(marker);
-    const markerChangeEvt = fire(markerChanges, capture, contentDiffs);
-    // If the developer prevents default on the marker changes event then don't
-    // handle the UI updates; they're doing it themselves.
-    if (markerChangeEvt.defaultPrevented) {
-        return;
-    }
-    updateContentDisplay(contentDiffs);
+    //display barcodeContent to the user
+    let barcodeContent = evt.detail;
+    console.log('barcodeContent', barcodeContent);
+    alert(barcodeContent);
+
+    //TODO implement handle marker discovery, as an example connect this function with a web service
 
     vibrate(200);
-}*/
+}
 
 let hintTimeout;
 const capture = new StreamCapture();
@@ -139,6 +93,7 @@ const capture = new StreamCapture();
  */
 async function createStreamCapture(detectionMode) {
     console.log('createStreamCapture', this);
+
     if (detectionMode === 'passive') {
         capture.captureRate = 600;
     } else {
@@ -150,11 +105,11 @@ async function createStreamCapture(detectionMode) {
             fire(frameEvent, capture, {imgData, detectionMode});
         });
     }
+
     capture.captureScale = 0.8;
     capture.addEventListener(closeEvent, close);
-    /*
-        capture.addEventListener(markerDetect, onMarkerFound);
-    */
+    capture.addEventListener(markerDetect, onMarkerFound);
+
     const streamOpts = {
         video: {
             facingMode: 'environment'
@@ -201,15 +156,11 @@ async function createStreamCapture(detectionMode) {
 
 export function close() {
     console.log('close', this);
+
     capture.stop();
     capture.remove();
     hideOverlay();
     clearTimeout(hintTimeout);
-    /*const onboarding = document.querySelector(OnboardingCard.defaultTagName);
-    if (!onboarding) {
-        return;
-    }
-    onboarding.remove();*/
 }
 
 let isProcessingCapture = false;
@@ -222,6 +173,7 @@ let isProcessingCapture = false;
  */
 async function onCaptureFrame(evt) {
     console.log('onCaptureFrame', this);
+
     // Prevent overloading the capture process.
     if (isProcessingCapture) {
         return;
@@ -230,16 +182,11 @@ async function onCaptureFrame(evt) {
     const capture = evt.target;
     const {detail} = evt;
     const {detectionMode, imgData} = detail;
+
+    console.log('imgData', imgData);
+
     // TODO: Expand with other types besides barcodes.
     const markers = await detectBarcodes(imgData, {polyfillPrefix});
-
-    //get one of several markers then display it to user
-    let mark = markers[0];
-    if (typeof(mark) !== 'undefined') {
-        alert(mark.rawValue);
-    } else {
-        alert('Item not recognized');
-    }
 
     for (const marker of markers) {
         const markerAlreadyDetected = detectedMarkers.has(marker.rawValue);
@@ -259,6 +206,7 @@ async function onCaptureFrame(evt) {
         showOverlay('No markers found');
     }
     capture.paused = false;
+
     // Provide a cool-off before allowing another detection. This aids the case
     // where a recently-scanned markers are mistakenly re-scanned.
     setTimeout(async () => {
@@ -268,21 +216,12 @@ async function onCaptureFrame(evt) {
             if (now - timeLastSeen < 1000) {
                 continue;
             }
-            const marker = {type: 'qrcode', value};
-            // removals.push(meaningMaker.markerLost(marker));
             detectedMarkers.delete(value);
         }
         // Wait for all dealer removals to conclude.
         await Promise.all(removals);
         isProcessingCapture = false;
     }, 1000);
-
-    /*// Hide the loader if there is one.
-    const loader = document.querySelector(DotLoader.defaultTagName);
-    if (!loader) {
-        return;
-    }
-    loader.remove();*/
 }
 
 /**
