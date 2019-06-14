@@ -5,10 +5,13 @@ import {supportsEnvironmentCamera} from '../src/utils/environment-camera.js';
 import {fire} from '../src/utils/fire.js';
 import {DEBUG_LEVEL, enableLogLevel, log} from '../src/utils/logger.js';
 import {vibrate} from '../src/utils/vibrate.js';
-import {cameraAccessDenied, markerChanges, markerDetect} from './events.js';
+import {cameraAccessDenied, markerDetect} from './events.js';
 
 export {vibrate} from '../src/utils/vibrate.js';
 
+/*
+* Detected Markers
+*/
 const detectedMarkers = new Map();
 
 /*
@@ -44,7 +47,8 @@ const attemptDetection = detectBarcodes(new ImageData(1, 1), {polyfillPrefix});
  */
 export async function initialize(opts) {
     console.log('initializeMain', this);
-    beginDetection(opts);
+    let detection = beginDetection(opts);
+    console.log('detection', detection)
 }
 
 /**
@@ -63,12 +67,6 @@ async function beginDetection({detectionMode = 'passive'}) {
     }
 }
 
-/**
- * Whenever we find nearby content, show it
- * TODO implement updateContentDisplay function
- async function updateContentDisplay(contentDiff) {
-}*/
-
 /*
 Handle Marker discovery
 */
@@ -80,7 +78,9 @@ async function onMarkerFound(evt) {
     console.log('barcodeContent', barcodeContent);
     alert(barcodeContent);
 
+    //TODO try to save barcodeContent at window object
     //TODO implement handle marker discovery, as an example connect this function with a web service
+    //TODO passing function from react component to this function to add above functionality
 
     vibrate(200);
 }
