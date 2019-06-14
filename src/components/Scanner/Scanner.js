@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {openUrl} from "./services/services";
+import {importPerceptionToolkit} from "./perception-toolkit";
 
 class Scanner extends Component {
     constructor(props) {
@@ -10,12 +11,12 @@ class Scanner extends Component {
     };
 
     componentDidMount() {
+        console.log('didMount', this);
+
         const cardContainer = document.body.querySelector('.container');
         const startButton = document.getElementById('get-started');
 
-        console.log('didMount', this);
-
-        const initScanner = async () => {
+        const initPerceptionToolkit = async () => {
             window.PerceptionToolkit = window.PerceptionToolkit || {};
             window.PerceptionToolkit.config = {
                 debugLevel: 'verbose',
@@ -25,25 +26,8 @@ class Scanner extends Component {
             };
         };
 
-        const importPerceptionToolkit = async () => {
-            await import('./perception-toolkit/lib/src/polyfill/barcode-detector')
-                .then(module => {
-                    window.BarcodeDetector = class CustomBarcodeDetectorPolyfill extends module.BarcodeDetectorPolyfill {
-                        constructor() {
-                            /*Hardcoded the script for the worker to run for now.
-                            TODO: add webpack worker loader to handle dynamically named worker script*/
-                            super('barcode-detector_worker.js');
-                        }
-                    }
-                });
-            await import('./perception-toolkit/lib/perception-toolkit/bootstrap')
-                .then(module => {
-                    console.log('perceptionToolkit installed!', {module});
-                })
-        };
-
         importPerceptionToolkit().then(console.log('importPerceptionToolkit', this));
-        initScanner().then(console.log('initScanner', this));
+        initPerceptionToolkit().then(console.log('configPerceptionToolkit', this));
     }
 
     render() {
