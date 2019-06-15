@@ -5,8 +5,8 @@ import {fire} from '../src/utils/fire.js';
 import {cameraAccessDenied, captureClosed, captureStopped, markerChanges} from './events.js';
 
 /*
-* TODO create a new interface replace the existing window interface so that we can use it in the Scanner component
-* TODO send captured content to a react component
+*  TODO implement redux
+*  TODO check is listen to captured content changes needed?
 * */
 
 const {config} = window.PerceptionToolkit;

@@ -93,7 +93,6 @@ async function onMarkerFound(evt) {
     window.PerceptionToolkit.CapturedContent.detail = barcodeContent;
 
     //TODO implement handle marker discovery, as an example connect this function with a web service
-    //TODO passing function from react component to this function to add above functionality
 
     vibrate(200);
 }
@@ -242,6 +241,7 @@ async function onCaptureFrame(evt) {
  */
 function onConnectivityChanged() {
     console.log('onConnectivityChanged', this);
+
     const connected = navigator.onLine;
     const capture = document.body.querySelector(StreamCapture.defaultTagName);
     if (!capture) {
