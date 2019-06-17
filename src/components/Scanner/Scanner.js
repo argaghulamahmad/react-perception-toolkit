@@ -5,9 +5,6 @@ import {importPerceptionToolkit} from "./perception-toolkit";
 class Scanner extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            targetText: 'test'
-        };
         this.scannerStartButton = React.createRef();
     };
 
@@ -34,7 +31,6 @@ class Scanner extends Component {
             <div>
                 <h2>Scanner</h2>
                 <button ref={this.scannerStartButton} id="get-started">Get started</button>
-                <p>{this.state.targetText}</p>
             </div>
         );
     }
