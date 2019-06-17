@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {openUrl} from "./services/services";
+import {redirectToTokopediaPage} from "./services/services";
 import {importPerceptionToolkit} from "./perception-toolkit";
 
 class Scanner extends Component {
@@ -21,7 +21,7 @@ class Scanner extends Component {
             window.PerceptionToolkit.config = {
                 debugLevel: 'verbose',
                 button: startButton,
-                callback: openUrl
+                callback: redirectToTokopediaPage
             };
         };
 

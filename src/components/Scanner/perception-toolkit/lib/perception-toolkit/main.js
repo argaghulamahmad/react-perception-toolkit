@@ -81,7 +81,6 @@ async function onMarkerFound(evt) {
     // Display barcodeContent to the user.
     let barcodeContent = evt.detail;
     console.log('barcodeContent', barcodeContent);
-    alert(barcodeContent);
 
     // Run the callback function.
     let {callbackFunction} = window.PerceptionToolkit.Functions;
