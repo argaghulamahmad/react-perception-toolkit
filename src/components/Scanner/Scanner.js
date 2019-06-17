@@ -29,7 +29,6 @@ class Scanner extends Component {
     render() {
         return (
             <div>
-                <h2>Scanner</h2>
                 <button ref={this.scannerStartButton} id="get-started">Get started</button>
             </div>
         );
