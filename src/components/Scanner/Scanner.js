@@ -7,21 +7,20 @@ class Scanner extends Component {
         super(props);
         this.state = {
             targetText: 'test'
-        }
+        };
+        this.scannerStartButton = React.createRef();
     };
 
     componentDidMount() {
         console.log('didMount', this);
 
-        const cardContainer = document.body.querySelector('.container');
-        const startButton = document.getElementById('get-started');
+        const startButton = this.scannerStartButton.current;
 
         const initPerceptionToolkit = async () => {
             window.PerceptionToolkit = window.PerceptionToolkit || {};
             window.PerceptionToolkit.config = {
                 debugLevel: 'verbose',
                 button: startButton,
-                cardContainer: cardContainer,
                 callback: openUrl
             };
         };
@@ -34,8 +33,7 @@ class Scanner extends Component {
         return (
             <div>
                 <h2>Scanner</h2>
-                <div className="container"/>
-                <button id="get-started">Get started</button>
+                <button ref={this.scannerStartButton} id="get-started">Get started</button>
                 <p>{this.state.targetText}</p>
             </div>
         );
