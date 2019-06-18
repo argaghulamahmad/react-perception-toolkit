@@ -14,9 +14,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { clamp } from '../../utils/clamp.js';
-import { fire } from '../../utils/fire.js';
-import { html, styles } from './stream-capture.template.js';
+import {clamp} from '../../utils/clamp.js';
+import {fire} from '../../utils/fire.js';
+import {html, styles} from './stream-capture.template.js';
+
 export const captureStopped = 'pt.capturestopped';
 /**
  * The name for captured frame events.

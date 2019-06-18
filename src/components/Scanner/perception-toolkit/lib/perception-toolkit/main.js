@@ -7,8 +7,6 @@ import {DEBUG_LEVEL, enableLogLevel, log} from '../src/utils/logger.js';
 import {vibrate} from '../src/utils/vibrate.js';
 import {cameraAccessDenied, markerDetect} from './events.js';
 
-export {vibrate} from '../src/utils/vibrate.js';
-
 /*
 * Detected Markers
 */
