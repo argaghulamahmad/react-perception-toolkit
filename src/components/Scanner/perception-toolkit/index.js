@@ -3,7 +3,7 @@ export const importPerceptionToolkit = async () => {
         .then(module => {
             window.BarcodeDetector = module.BarcodeDetectorPolyfill
         });
-    await import('./lib/perception-toolkit/bootstrap')
+    await import('./lib/perception-toolkit')
         .then(module => {
             console.log('perceptionToolkit installed!', {module});
         })
