@@ -1,20 +1,4 @@
 /**
- * @license
- * Copyright 2019 Google LLC
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/**
  * Represents the debug level for logging.
  */
 export var DEBUG_LEVEL;
@@ -40,12 +24,14 @@ export var DEBUG_LEVEL;
      */
     DEBUG_LEVEL[DEBUG_LEVEL["NONE"] = 0] = "NONE";
 })(DEBUG_LEVEL || (DEBUG_LEVEL = {}));
+
 /**
  * Enables logging at the given level. Note: by default debugging is disabled.
  */
 export function enableLogLevel(level) {
     self.DEBUG = level;
 }
+
 /**
  * Logs a message.
  *
@@ -81,6 +67,7 @@ export function log(msg, level = DEBUG_LEVEL.INFO, tag) {
             break;
     }
 }
+
 function applyTagIfProvided(label, tag) {
     let labelStr = '';
     switch (label) {
@@ -99,4 +86,5 @@ function applyTagIfProvided(label, tag) {
     }
     return `${labelStr} [${tag}]:`;
 }
+
 //# sourceMappingURL=logger.js.map

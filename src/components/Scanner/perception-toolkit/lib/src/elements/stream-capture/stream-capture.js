@@ -1,19 +1,3 @@
-/**
- * @license
- * Copyright 2019 Google LLC
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 import {clamp} from '../../utils/clamp.js';
 import {fire} from '../../utils/fire.js';
 import {html, styles} from './stream-capture.template.js';
@@ -35,6 +19,7 @@ export const stopEvent = 'pt.capturestopped';
  * The name for stop capture events.
  */
 export const closeEvent = 'pt.captureclose';
+
 /**
  * Provides an element that abstracts the capture of stream frames. For example,
  * given a `getUserMedia` video stream, this will -- if desired -- capture an
@@ -91,7 +76,7 @@ export class StreamCapture extends HTMLElement {
          * Whether to pause the frame.
          */
         this.paused = false;
-        this.root = this.attachShadow({ mode: 'open' });
+        this.root = this.attachShadow({mode: 'open'});
         this.lastCapture = -1;
         this.root.innerHTML = `<style>${styles}</style> ${html}`;
         this.root.addEventListener('click', (evt) => {
@@ -102,12 +87,14 @@ export class StreamCapture extends HTMLElement {
             fire(closeEvent, this);
         });
     }
+
     /**
      * @ignore Only public because it's a Custom Element.
      */
     disconnectedCallback() {
         this.stop();
     }
+
     /**
      * Starts the capture of the stream.
      */
@@ -173,8 +160,9 @@ export class StreamCapture extends HTMLElement {
                 update(now);
                 fire(startEvent, this);
             });
-        }, { once: true });
+        }, {once: true});
     }
+
     /**
      * Manually captures a frame. Intended to be used when `captureRate` is `0`.
      */
@@ -192,20 +180,20 @@ export class StreamCapture extends HTMLElement {
                 imgData.src = canvas.toDataURL('image/png');
                 imgData.onload = () => {
                     if (this.captureRate !== 0) {
-                        fire(frameEvent, this, { imgData });
+                        fire(frameEvent, this, {imgData});
                     }
                     resolve(imgData);
                 };
-            }
-            else {
+            } else {
                 imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
                 if (this.captureRate !== 0) {
-                    fire(frameEvent, this, { imgData });
+                    fire(frameEvent, this, {imgData});
                 }
                 resolve(imgData);
             }
         });
     }
+
     /**
      * Stops the stream.
      */
@@ -225,6 +213,7 @@ export class StreamCapture extends HTMLElement {
         this.ctx = undefined;
         fire(stopEvent, this);
     }
+
     setReticleOrientation(vertical) {
         const reticle = this.root.querySelector('#reticle');
         /* istanbul ignore if */
@@ -249,6 +238,7 @@ export class StreamCapture extends HTMLElement {
         }
         reticle.style.opacity = '1';
     }
+
     initElementsIfNecessary() {
         /* istanbul ignore else */
         if (!this.canvas) {
@@ -266,6 +256,7 @@ export class StreamCapture extends HTMLElement {
         }
     }
 }
+
 /**
  * The StreamCapture's default tag name for registering with
  * `customElements.define`.

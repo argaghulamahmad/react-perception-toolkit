@@ -1,26 +1,12 @@
-/**
- * @license
- * Copyright 2019 Google LLC
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-import { injectScript } from '../utils/inject-script.js';
-import { DEBUG_LEVEL, log } from '../utils/logger.js';
+import {injectScript} from '../utils/inject-script.js';
+import {DEBUG_LEVEL, log} from '../utils/logger.js';
+
 let detector;
+
 /**
  * Detects barcodes from image sources.
  */
-export async function detectBarcodes(data, { context = window, forceNewDetector = false, polyfillRequired = false, polyfillPrefix = '' } = {}) {
+export async function detectBarcodes(data, {context = window, forceNewDetector = false, polyfillRequired = false, polyfillPrefix = ''} = {}) {
     const loadPolyfill = polyfillRequired ||
         (context === window && !('BarcodeDetector' in context));
     if (loadPolyfill) {
@@ -37,8 +23,7 @@ export async function detectBarcodes(data, { context = window, forceNewDetector 
     }
     try {
         return await detector.detect(data);
-    }
-    catch (e) {
+    } catch (e) {
         // If the polyfill has loaded but there are still issues, exit.
         if (polyfillRequired) {
             return [];
@@ -52,4 +37,5 @@ export async function detectBarcodes(data, { context = window, forceNewDetector 
         });
     }
 }
+
 //# sourceMappingURL=barcode.js.map

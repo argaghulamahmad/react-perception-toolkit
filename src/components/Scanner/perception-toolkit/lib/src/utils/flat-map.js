@@ -1,20 +1,4 @@
 /**
- * @license
- * Copyright 2019 Google LLC
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/**
  * The flatMap() method first maps each element using a mapping function, then flattens the result into a new array.
  * It is identical to a map followed by a flat of depth 1.
  */
@@ -26,21 +10,21 @@ export function flatMapPolyfill(arr, callback) {
         const val = callback(x, i, arr);
         if (Array.isArray(val)) {
             return acc.concat(val);
-        }
-        else {
+        } else {
             acc.push(val);
             return acc;
         }
     }, []);
 }
+
 export function flatMap(arr, callback, thisArg) {
     if ('flatMap' in Array.prototype) {
         // ts-ignore used to pass karma tests.  TS complains flatMap() is not defined, even though we are feature detecting.
         // @ts-ignore
         return arr.flatMap(callback);
-    }
-    else {
+    } else {
         return flatMapPolyfill(arr, callback);
     }
 }
+
 //# sourceMappingURL=flat-map.js.map

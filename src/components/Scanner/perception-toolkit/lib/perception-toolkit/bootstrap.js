@@ -4,11 +4,6 @@ import {WasmSupport} from '../src/support/wasm.js';
 import {fire} from '../src/utils/fire.js';
 import {cameraAccessDenied, captureClosed, captureStopped, markerChanges} from './events.js';
 
-/*
-*  TODO implement redux
-*  TODO check is listen to captured content changes needed?
-* */
-
 const {config} = window.PerceptionToolkit;
 const deviceNotSupported = 'pt.devicenotsupported';
 window.PerceptionToolkit.config = window.PerceptionToolkit.config || {};
