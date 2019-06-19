@@ -11,13 +11,11 @@ class Scanner extends Component {
     componentDidMount() {
         console.log('didMount', this);
 
-        const startButton = this.scannerStartButton.current;
-
         const initPerceptionToolkit = async () => {
             window.PerceptionToolkit = window.PerceptionToolkit || {};
             window.PerceptionToolkit.config = {
                 debugLevel: 'verbose',
-                button: startButton,
+                button: this.scannerStartButton.current,
                 callback: redirectToTokopediaPage
             };
         };
