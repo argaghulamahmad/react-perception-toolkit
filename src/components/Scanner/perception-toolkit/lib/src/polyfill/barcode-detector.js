@@ -24,7 +24,7 @@ export class BarcodeDetectorPolyfill {
                 }
             };
         });
-        /* istanbul ignore next */
+
         window.addEventListener('unload', () => {
             this.worker.terminate();
         });
@@ -58,7 +58,7 @@ export class BarcodeDetectorPolyfill {
 }
 
 // Prevent overwriting the built-in.
-/* istanbul ignore next */
+
 if (!('BarcodeDetector' in self)) {
     const script = document.currentScript;
     window.BarcodeDetector = BarcodeDetectorPolyfill;

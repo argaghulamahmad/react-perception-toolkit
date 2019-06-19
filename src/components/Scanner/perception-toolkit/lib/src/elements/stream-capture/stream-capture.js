@@ -49,7 +49,7 @@ export const closeEvent = 'pt.captureclose';
  * ```
  */
 export class StreamCapture extends HTMLElement {
-    /* istanbul ignore next */
+
     constructor() {
         super();
         /**
@@ -138,7 +138,7 @@ export class StreamCapture extends HTMLElement {
                     (this.video.videoWidth === 0 || this.video.videoHeight === 0);
             }
             // Should we arrive here without video dimensions we throw.
-            /* istanbul ignore if */
+
             if (this.video.videoWidth === 0 || this.video.videoHeight === 0) {
                 throw new Error('Video has width or height of 0');
             }
@@ -167,7 +167,7 @@ export class StreamCapture extends HTMLElement {
      * Manually captures a frame. Intended to be used when `captureRate` is `0`.
      */
     async captureFrame() {
-        /* istanbul ignore if */
+
         if (!this.ctx || !this.canvas) {
             throw new Error('Unable to capture frame');
         }
@@ -216,7 +216,7 @@ export class StreamCapture extends HTMLElement {
 
     setReticleOrientation(vertical) {
         const reticle = this.root.querySelector('#reticle');
-        /* istanbul ignore if */
+
         if (!reticle) {
             return;
         }
@@ -225,7 +225,7 @@ export class StreamCapture extends HTMLElement {
             const maskOuter = reticle.querySelector('#reticle-cut-out-outer');
             const maskInner = reticle.querySelector('#reticle-cut-out-inner');
             const reticleBox = reticle.querySelector('#reticle-box');
-            /* istanbul ignore if */
+
             if (!maskOuter || !maskInner || !reticleBox) {
                 return;
             }
@@ -240,17 +240,17 @@ export class StreamCapture extends HTMLElement {
     }
 
     initElementsIfNecessary() {
-        /* istanbul ignore else */
+        
         if (!this.canvas) {
             this.canvas = document.createElement('canvas');
             this.ctx = this.canvas.getContext('2d');
-            /* istanbul ignore if */
+
             if (!this.ctx) {
                 throw new Error('Unable to create canvas context');
             }
             this.root.appendChild(this.canvas);
         }
-        /* istanbul ignore else */
+        
         if (!this.video) {
             this.video = document.createElement('video');
         }

@@ -1,6 +1,6 @@
 import {clamp} from './clamp.js';
 
-/* istanbul ignore next */
+
 export class Speech {
     constructor() {
         this.message = '';
