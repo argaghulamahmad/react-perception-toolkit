@@ -98,29 +98,11 @@ async function initializeExperience() {
     console.log('iifBootstrap', this);
 
     const supported = await deviceSupportTest;
-    const {config} = window.PerceptionToolkit;
-    const {buttonVisibilityClass = 'visible'} = config;
-    const getStarted = config.button ? config.button :
-        config.buttonSelector ? document.body.querySelector(config.buttonSelector) :
-            null;
-
-    if (!getStarted) {
+    if (!supported) {
+        alert('Sorry, this browser does not support the required features');
         return;
     }
-
-    getStarted.classList.toggle(buttonVisibilityClass, supported);
-
-    // When getStarted is clicked, load the experience.
-    getStarted.addEventListener('click', (e) => {
-        // If the button was visible and the user clicked it, alert the no support message here.
-        if (!supported) {
-            alert('Sorry, this browser does not support the required features');
-            return;
-        }
-
-        getStarted.classList.remove(buttonVisibilityClass);
-        initializeExperience();
-    });
+    initializeExperience();
 
     window.addEventListener(captureStopped, () => {
         console.log('captureStopped', this)

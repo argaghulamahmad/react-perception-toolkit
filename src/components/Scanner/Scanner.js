@@ -5,7 +5,6 @@ import {importPerceptionToolkit} from "./perception-toolkit";
 class Scanner extends Component {
     constructor(props) {
         super(props);
-        this.scannerStartButton = React.createRef();
     };
 
     componentDidMount() {
@@ -15,7 +14,6 @@ class Scanner extends Component {
             window.PerceptionToolkit = window.PerceptionToolkit || {};
             window.PerceptionToolkit.config = {
                 debugLevel: 'verbose',
-                button: this.scannerStartButton.current,
                 callback: redirectToTokopediaPage
             };
         };
@@ -27,7 +25,6 @@ class Scanner extends Component {
     render() {
         return (
             <div>
-                <button ref={this.scannerStartButton} id="get-started">Get started</button>
             </div>
         );
     }
