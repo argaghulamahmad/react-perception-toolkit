@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83c92675-d3bd-4076-8851-4b0e0e196a62" name="Default Changelist" comment="Remove istanbul comment">
+    <list default="true" id="83c92675-d3bd-4076-8851-4b0e0e196a62" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector_worker.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector_worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.worker.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,23 +18,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="61" column="35" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+            <state relative-caret-position="336">
+              <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector_worker.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.worker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-392">
-              <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            <state relative-caret-position="294">
+              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
               <folding>
                 <element signature="e#29#30#0" expanded="true" />
                 <element signature="e#55#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="464" column="53" lean-forward="true" selection-start-line="464" selection-start-column="53" selection-end-line="464" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" column="58" lean-forward="true" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+              <folding>
+                <element signature="e#133#134#0" expanded="true" />
+                <element signature="e#211#212#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,7 +76,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>this.canvas.height</find>
       <find>%</find>
       <find>getElement</find>
       <find>getElements</find>
@@ -67,7 +92,6 @@
       <find>vibrate</find>
       <find>overlay</find>
       <find>Copyright 2019 Google LLC</find>
-      <find>url</find>
       <find>loader</find>
       <find>window</find>
       <find>* istanbul ignore else */</find>
@@ -80,6 +104,8 @@
       <find>worker</find>
       <find>rules</find>
       <find>rule</find>
+      <find>url</find>
+      <find>oneof</find>
     </findStrings>
     <replaceStrings>
       <replace>this</replace>
@@ -136,7 +162,6 @@
         <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/main.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/PerceptionToolkit.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/Scanner.js" />
-        <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/index.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/defs/wasm-module.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/bootstrap.js" />
@@ -151,6 +176,7 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/detectors/barcode.js" />
         <option value="$PROJECT_DIR$/config/webpack.config.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/index.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.js" />
       </list>
     </option>
@@ -244,39 +270,6 @@
               <item name="Scanner" type="462c0819:PsiDirectoryNode" />
               <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Scanner" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="events.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Scanner" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="main.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Scanner" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -357,16 +350,6 @@
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Scanner" type="462c0819:PsiDirectoryNode" />
-              <item name="perception-toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="index.js" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
@@ -812,16 +795,24 @@
       <option name="project" value="LOCAL" />
       <updated>1560915339743</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Remove js map files">
+      <created>1560915874835</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1560915874835</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142243000" />
+    <option name="totallyTimeSpent" value="142657000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3094978" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3094978" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -835,7 +826,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.36874363" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.36874363" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.7579162" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -899,7 +890,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Fix detectionMode config from active to passive" />
     <MESSAGE value="Remove unused vars&#10;And add todo to implement replacement for window interface." />
     <MESSAGE value="Alert barcodeData when markerDetect evt is triggered&#10;,add some TODOs, and track several variables." />
     <MESSAGE value="Fix some typos on some console log&#10;For tracing purpose." />
@@ -924,7 +914,8 @@
     <MESSAGE value="Set body height to 100%" />
     <MESSAGE value="Remove unused default perception-toolkit js files" />
     <MESSAGE value="Remove istanbul comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove istanbul comment" />
+    <MESSAGE value="Remove js map files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove js map files" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/perception-toolkit/src/utils/logger.ts">
@@ -1133,13 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.worker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1164,13 +1148,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="299" lean-forward="true" selection-start-line="299" selection-end-line="299" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/barcode-detector.worker.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1189,20 +1166,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.js">
+    <entry file="file://$PROJECT_DIR$/config/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="61" column="35" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+        <state relative-caret-position="216">
+          <caret line="464" column="53" lean-forward="true" selection-start-line="464" selection-start-column="53" selection-end-line="464" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector_worker.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-392">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        <state relative-caret-position="63">
+          <caret line="3" column="58" lean-forward="true" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+          <folding>
+            <element signature="e#133#134#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.worker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding>
             <element signature="e#29#30#0" expanded="true" />
             <element signature="e#55#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
