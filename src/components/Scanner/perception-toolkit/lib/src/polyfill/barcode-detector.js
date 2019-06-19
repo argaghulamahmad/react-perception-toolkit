@@ -1,18 +1,15 @@
 import {isImageData} from '../utils/is-image-data.js';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import Worker from 'worker-loader!./barcode-detector.worker.js'
 
 export class BarcodeDetectorPolyfill {
-    constructor(path = 'barcode-detector.worker.js') {
+    constructor() {
         this.canvas = document.createElement('canvas');
         this.ctx = this.canvas.getContext('2d');
         this.hasLoaded = false;
         let prefix = '/';
-        /*Commenting this out because this seems to be only suitable for their use case
-        if (typeof BarcodeDetectorPolyfill.loadedFrom !== 'undefined') {
-            const prefixUrl = new URL(path, BarcodeDetectorPolyfill.loadedFrom);
-            path = prefixUrl.href;
-            prefix = prefixUrl.href.replace(/lib.*!/, '');
-        }*/
-        this.worker = new Worker(path);
+        this.worker = new Worker();
+        console.log('barcode-detector.worker.js', this.worker);
         this.worker.postMessage(prefix);
         this.isReadyInternal = new Promise((resolve, reject) => {
             this.worker.onmessage = (e) => {
