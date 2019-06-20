@@ -19,34 +19,6 @@ export const stopEvent = 'pt.capturestopped';
  */
 export const closeEvent = 'pt.captureclose';
 
-/**
- * Provides an element that abstracts the capture of stream frames. For example,
- * given a `getUserMedia` video stream, this will -- if desired -- capture an
- * image from the stream, downsample it, and emit an event with the pixel data.
- *
- * **Note that, due to the internal reliance on `requestAnimationFrame`, the
- * capture element must be attached to the DOM, and the tab visible.**
- *
- * ```javascript
- * const capture = new StreamCapture();
- *
- * // Capture every 600ms at 50% scale.
- * capture.captureRate = 600;
- * capture.captureScale = 0.5;
- *
- * // Attempt to get the camera's stream and start monitoring.
- * const stream = await navigator.mediaDevices.getUserMedia({ video: true});
- * capture.start(stream);
- *
- * // Append and listen to captures.
- * document.body.appendChild(capture);
- * capture.addEventListener(StreamCapture.frameEvent, (e) => {
- *   const { imgData } = e.detail;
- *
- *   // Process the ImageData.
- * });
- * ```
- */
 export class StreamCapture {
 
     constructor() {
@@ -96,14 +68,7 @@ export class StreamCapture {
             fire(closeEvent, this.root);
         });
 
-        console.log('StreamCaptureConstructor', this);
-    }
-
-    /**
-     * @ignore Only public because it's a Custom Element.
-     */
-    disconnectedCallback() {
-        this.stop();
+        console.log('StreamCapture', this);
     }
 
     /**
@@ -156,7 +121,6 @@ export class StreamCapture {
                 throw new Error('Video has width or height of 0');
             }
 
-            console.log(window.innerHeight.toString());
             const streamCaptureCanvas = this.canvas;
             streamCaptureCanvas.style.height = window.innerHeight.toString() + 'px';
 
@@ -180,6 +144,7 @@ export class StreamCapture {
      * Manually captures a frame. Intended to be used when `captureRate` is `0`.
      */
     async captureFrame() {
+        console.log('captureFrame', this);
 
         if (!this.ctx || !this.canvas) {
             throw new Error('Unable to capture frame');
@@ -211,6 +176,7 @@ export class StreamCapture {
      * Stops the stream.
      */
     stop() {
+        console.log('stop', this);
         if (!this.stream || !this.ctx || !this.canvas) {
             return;
         }
@@ -227,6 +193,8 @@ export class StreamCapture {
     }
 
     setReticleOrientation(vertical) {
+        console.log('setReticleOrientation');
+
         const reticle = this.reticleRef;
 
         if (!reticle) {
@@ -252,7 +220,7 @@ export class StreamCapture {
     }
 
     initElementsIfNecessary() {
-        console.log('stream-capture root', this.root);
+        console.log('initElementsIfNecessary', this.root);
 
         if (!this.canvas) {
             this.canvas = this.canvasRef;

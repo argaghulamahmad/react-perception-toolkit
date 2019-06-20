@@ -59,13 +59,15 @@ if (window.PerceptionToolkit.config.onload) {
  * Perform a device support test.
  */
 const deviceSupportTest = new Promise(async (resolve) => {
-    console.log('loadObject', this);
+    console.log('deviceSupportTest', this);
 
     // Detect the necessary support.
     const deviceSupport = new DeviceSupport();
     deviceSupport.addDetector(GetUserMediaSupport);
     deviceSupport.addDetector(WasmSupport);
     const support = await deviceSupport.detect();
+
+    console.log('support', support);
 
     // If everything necessary is supported, inject the loader and show it if
     // desired.
@@ -84,6 +86,8 @@ async function initializeExperience() {
 
     //Check result of device support test.
     const supported = await deviceSupportTest;
+    console.log('supported', supported);
+
     if (!supported) {
         const deviceNotSupportedEvt = fire(deviceNotSupported, window);
         if (!deviceNotSupportedEvt.defaultPrevented) {
@@ -96,8 +100,10 @@ async function initializeExperience() {
 
     // Now the experience has begun, update the closeExperience fn.
     window.PerceptionToolkit.Functions.closeExperience = close;
-    initialize({detectionMode});
-}
+
+    // Start detection
+    let detection = beginDetection(detectionMode);
+    console.log('detection', detection)}
 
 /*
     Bootstrap function
@@ -106,6 +112,8 @@ async function initializeExperience() {
     console.log('iifBootstrap', this);
 
     const supported = await deviceSupportTest;
+    console.log('supported', supported);
+
     if (!supported) {
         alert('Sorry, this browser does not support the required features');
         return;
@@ -118,19 +126,11 @@ async function initializeExperience() {
 })();
 
 /**
- * Initialize
- */
-async function initialize(opts) {
-    console.log('initializeMain', this);
-    let detection = beginDetection(opts);
-    console.log('detection', detection)
-}
-
-/**
  * Begin Detection
  */
 async function beginDetection({detectionMode = 'passive'}) {
     console.log('beginDetection', this);
+
     try {
         // Wait for the faked detection to resolve.
         await attemptDetection;
@@ -165,8 +165,6 @@ async function onMarkerFound(evt) {
 
     // Save barcode content so that the react component can access it.
     window.PerceptionToolkit.CapturedContent.detail = barcodeContent;
-
-    //TODO implement handle marker discovery, as an example connect this function with a web service
 }
 
 /**
@@ -196,6 +194,7 @@ async function createStreamCapture(detectionMode) {
             facingMode: 'environment'
         }
     };
+
     // Attempt to get access to the user's camera.
     try {
         let stream = await navigator.mediaDevices.getUserMedia(streamOpts);
@@ -225,7 +224,6 @@ async function createStreamCapture(detectionMode) {
             }
         });
         capture.start(stream);
-        document.body.appendChild(capture);
         hintTimeout = setTimeout(() => {
             showOverlay('Make sure the marker is inside the box.');
         }, config.hintTimeout || 5000);
@@ -264,7 +262,6 @@ async function onCaptureFrame(evt) {
 
     console.log('imgData', imgData);
 
-    // TODO: Expand with other types besides barcodes.
     const markers = await detectBarcodes(imgData, {polyfillPrefix});
 
     for (const marker of markers) {
@@ -310,7 +307,9 @@ function onConnectivityChanged() {
     console.log('onConnectivityChanged', this);
 
     const connected = navigator.onLine;
+    console.log('connected', connected);
     const capture = document.body.querySelector(StreamCapture.defaultTagName);
+    console.log('documentCapture', capture);
     if (!capture) {
         return;
     }
