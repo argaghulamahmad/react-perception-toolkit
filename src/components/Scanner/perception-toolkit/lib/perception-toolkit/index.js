@@ -11,17 +11,30 @@ import {DEBUG_LEVEL, enableLogLevel, log} from '../src/utils/logger.js';
 
 const {config} = window.PerceptionToolkit;
 const deviceNotSupported = 'pt.devicenotsupported';
+const detectedMarkers = new Map();
+const polyfillPrefix = window.PerceptionToolkit.config.root || '';
+const attemptDetection = detectBarcodes(new ImageData(1, 1), {polyfillPrefix});
+const capture = new StreamCapture();
+let isProcessingCapture = false;
+let hintTimeout;
+
+const {layoutRefs} = window.PerceptionToolkit.StreamCapture;
+console.log('layoutRefs', layoutRefs);
+
+const { container, reticle, reticleBox, maskOuter, maskInner, canvas } = layoutRefs;
+
+enableLogLevel(DEBUG_LEVEL.ERROR);
+
+window.addEventListener(frameEvent, onCaptureFrame);
+window.addEventListener('offline', onConnectivityChanged);
+window.addEventListener('online', onConnectivityChanged);
+
 window.PerceptionToolkit.config = window.PerceptionToolkit.config || {};
 
-/*
-* Expose captured content.*/
 window.PerceptionToolkit.CapturedContent = {
     detail: null
 };
 
-/*
-Expose events.
-*/
 window.PerceptionToolkit.Events = {
     CameraAccessDenied: cameraAccessDenied,
     CaptureClosed: captureClosed,
@@ -30,9 +43,6 @@ window.PerceptionToolkit.Events = {
     MarkerChanges: markerChanges,
 };
 
-/*
-Expose functions.
-*/
 window.PerceptionToolkit.Functions = {
     initializeExperience,
     closeExperience() {
@@ -82,7 +92,6 @@ async function initializeExperience() {
         return;
     }
 
-    const {config} = window.PerceptionToolkit;
     const {detectionMode = 'passive'} = config;
 
     // Now the experience has begun, update the closeExperience fn.
@@ -108,43 +117,10 @@ async function initializeExperience() {
     });
 })();
 
-/*
-* Detected Markers
-*/
-const detectedMarkers = new Map();
-
-// /*
-// Register custom elements.
-// */
-// customElements.define(StreamCapture.defaultTagName, StreamCapture);
-
-/*
-Register events.
-*/
-window.addEventListener(frameEvent, onCaptureFrame);
-window.addEventListener('offline', onConnectivityChanged);
-window.addEventListener('online', onConnectivityChanged);
-
-/*
-Log errors by default.
-*/
-enableLogLevel(DEBUG_LEVEL.ERROR);
-
-/*
-While the on boarding begins, attempt a fake detection. If the polyfill is
-necessary, or the detection fails, we should find out.
-*/
-const polyfillPrefix = window.PerceptionToolkit.config.root || '';
-
-/*
-TODO: Attempt the correct detection based on the target types.
-*/
-const attemptDetection = detectBarcodes(new ImageData(1, 1), {polyfillPrefix});
-
 /**
  * Initialize
  */
-export async function initialize(opts) {
+async function initialize(opts) {
     console.log('initializeMain', this);
     let detection = beginDetection(opts);
     console.log('detection', detection)
@@ -192,9 +168,6 @@ async function onMarkerFound(evt) {
 
     //TODO implement handle marker discovery, as an example connect this function with a web service
 }
-
-let hintTimeout;
-const capture = new StreamCapture();
 
 /**
  * Creates the stream an initializes capture.
@@ -255,7 +228,7 @@ async function createStreamCapture(detectionMode) {
         document.body.appendChild(capture);
         hintTimeout = setTimeout(() => {
             showOverlay('Make sure the marker is inside the box.');
-        }, window.PerceptionToolkit.config.hintTimeout || 5000);
+        }, config.hintTimeout || 5000);
     } catch (e) {
         // User has denied or there are no cameras.
         fire(cameraAccessDenied, window);
@@ -270,8 +243,6 @@ export function close() {
     hideOverlay();
     clearTimeout(hintTimeout);
 }
-
-let isProcessingCapture = false;
 
 /**
  * Processes the image data captured by the StreamCapture class, and hands off
