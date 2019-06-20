@@ -108,7 +108,6 @@ async function initializeExperience() {
         console.log('captureStopped', this)
     });
 })();
-//# sourceMappingURL=bootstrap.js.map
 
 /*
 * Detected Markers
@@ -353,5 +352,3 @@ function onConnectivityChanged() {
         hideOverlay();
     }
 }
-
-//# sourceMappingURL=main.js.map
