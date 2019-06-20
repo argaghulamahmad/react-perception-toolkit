@@ -12,7 +12,6 @@ class Scanner extends Component {
         this.reticleBox = React.createRef();
         this.maskOuter = React.createRef();
         this.maskInner = React.createRef();
-        this.canvas = React.createRef();
     };
 
     componentDidMount() {
@@ -32,8 +31,7 @@ class Scanner extends Component {
                     reticle: this.reticle.current,
                     reticleBox: this.reticleBox.current,
                     maskOuter: this.maskOuter.current,
-                    maskInner: this.maskInner.current,
-                    canvas: this.canvas.current
+                    maskInner: this.maskInner.current
                 }
             };
         };
@@ -56,7 +54,6 @@ class Scanner extends Component {
                     <rect id="reticle-box" ref={this.reticleBox} width="133" height="100" x="0" y="0"
                           fill="rgba(0,0,0,0.4)" mask="url(#reticle-cut-out)"/>
                 </svg>
-                <canvas ref={this.canvas} id='stream-capture-canvas'/>
             </div>
         );
     }

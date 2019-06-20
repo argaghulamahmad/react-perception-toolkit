@@ -50,13 +50,12 @@ export class StreamCapture {
         const {layoutRefs} = window.PerceptionToolkit.StreamCapture;
         console.log('layoutRefs', layoutRefs);
 
-        const { container, reticle, reticleBox, maskOuter, maskInner, canvas } = layoutRefs;
+        const { container, reticle, reticleBox, maskOuter, maskInner } = layoutRefs;
         this.containerRef = container;
         this.reticleRef = reticle;
         this.reticleBoxRef = reticleBox;
         this.maskOuterRef = maskOuter;
         this.maskInnerRef = maskInner;
-        this.canvasRef = canvas;
 
         this.root = this.containerRef;
         this.lastCapture = -1;
@@ -223,7 +222,8 @@ export class StreamCapture {
         console.log('initElementsIfNecessary', this.root);
 
         if (!this.canvas) {
-            this.canvas = this.canvasRef;
+            this.canvas = document.createElement('canvas');
+            this.containerRef.appendChild(this.canvas);
             this.ctx = this.canvas.getContext('2d');
 
             if (!this.ctx) {
