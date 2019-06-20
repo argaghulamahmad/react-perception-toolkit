@@ -1,6 +1,5 @@
 import {clamp} from '../../utils/clamp.js';
 import {fire} from '../../utils/fire.js';
-import {html, styles} from './stream-capture.template.js';
 
 export const captureStopped = 'pt.capturestopped';
 /**
@@ -76,9 +75,8 @@ export class StreamCapture extends HTMLElement {
          * Whether to pause the frame.
          */
         this.paused = false;
-        this.root = this.attachShadow({mode: 'open'});
+        this.root = document.getElementById('stream-capture-container');
         this.lastCapture = -1;
-        this.root.innerHTML = `<style>${styles}</style> ${html}`;
         this.root.addEventListener('click', (evt) => {
             const clicked = evt.path ? evt.path[0] : evt.composedPath()[0];
             if (clicked.id !== 'close') {
@@ -144,8 +142,8 @@ export class StreamCapture extends HTMLElement {
             }
 
             console.log(window.innerHeight.toString());
-            const body = document.querySelector("body");
-            body.style.height = window.innerHeight.toString() + 'px';
+            const streamCaptureCanvas = document.querySelector("#stream-capture-canvas");
+            streamCaptureCanvas.style.height = window.innerHeight.toString() + 'px';
 
             this.canvas.width = this.video.videoWidth * this.captureScale;
             this.canvas.height = this.video.videoHeight * this.captureScale;
@@ -240,17 +238,17 @@ export class StreamCapture extends HTMLElement {
     }
 
     initElementsIfNecessary() {
-        
+        console.log('stream-capture root', this.root);
+
         if (!this.canvas) {
-            this.canvas = document.createElement('canvas');
+            this.canvas = document.getElementById('stream-capture-canvas');
             this.ctx = this.canvas.getContext('2d');
 
             if (!this.ctx) {
                 throw new Error('Unable to create canvas context');
             }
-            this.root.appendChild(this.canvas);
         }
-        
+
         if (!this.video) {
             this.video = document.createElement('video');
         }
