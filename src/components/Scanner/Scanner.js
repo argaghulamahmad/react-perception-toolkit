@@ -29,7 +29,7 @@ class Scanner extends Component {
             window.PerceptionToolkit.StreamCapture = {
                 layoutRefs: {
                     container: this.container.current,
-                    reticle: this.reticle,
+                    reticle: this.reticle.current,
                     reticleBox: this.reticleBox.current,
                     maskOuter: this.maskOuter.current,
                     maskInner: this.maskInner.current,

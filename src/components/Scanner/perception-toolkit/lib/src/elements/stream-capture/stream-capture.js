@@ -74,15 +74,6 @@ export class StreamCapture {
          * Whether to pause the frame.
          */
         this.paused = false;
-        this.root = this.containerRef;
-        this.lastCapture = -1;
-        this.root.addEventListener('click', (evt) => {
-            const clicked = evt.path ? evt.path[0] : evt.composedPath()[0];
-            if (clicked.id !== 'close') {
-                return;
-            }
-            fire(closeEvent, this.root);
-        });
 
         const {layoutRefs} = window.PerceptionToolkit.StreamCapture;
         console.log('layoutRefs', layoutRefs);
@@ -94,6 +85,16 @@ export class StreamCapture {
         this.maskOuterRef = maskOuter;
         this.maskInnerRef = maskInner;
         this.canvasRef = canvas;
+
+        this.root = this.containerRef;
+        this.lastCapture = -1;
+        this.root.addEventListener('click', (evt) => {
+            const clicked = evt.path ? evt.path[0] : evt.composedPath()[0];
+            if (clicked.id !== 'close') {
+                return;
+            }
+            fire(closeEvent, this.root);
+        });
 
         console.log('StreamCaptureConstructor', this);
     }
