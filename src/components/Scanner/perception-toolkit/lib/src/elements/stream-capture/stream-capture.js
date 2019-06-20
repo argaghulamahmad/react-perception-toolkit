@@ -208,12 +208,12 @@ export class StreamCapture {
             if (!maskOuter || !maskInner || !reticleBox) {
                 return;
             }
-            maskOuter.setAttribute('width', maskOuter.style.height.toString());
-            maskOuter.setAttribute('height', maskOuter.style.width.toString());
+            maskOuter.setAttribute('width', maskOuter.style.height.toString() + 'px');
+            maskOuter.setAttribute('height', maskOuter.style.width.toString() + 'px');
             maskInner.setAttribute('x', maskInner.y.baseVal.value.toString());
             maskInner.setAttribute('y', maskInner.x.baseVal.value.toString());
-            reticleBox.setAttribute('width', reticleBox.style.height.toString());
-            reticleBox.setAttribute('height', reticleBox.style.width.toString());
+            reticleBox.setAttribute('width', reticleBox.style.height.toString() + 'px');
+            reticleBox.setAttribute('height', reticleBox.style.width.toString() + 'px');
         }
         reticle.style.opacity = '1';
     }

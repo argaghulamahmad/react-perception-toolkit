@@ -15,12 +15,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/index.js">
+        <entry file="file://$PROJECT_DIR$/src/containers/Home/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="77" lean-forward="true" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
+            <state relative-caret-position="147">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Scanner/Scanner.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -28,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="216" column="81" lean-forward="true" selection-start-line="216" selection-start-column="81" selection-end-line="216" selection-end-column="81" />
+            <state relative-caret-position="498">
+              <caret line="227" lean-forward="true" selection-start-line="227" selection-end-line="227" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -49,9 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>capture</find>
-      <find>close</find>
-      <find>isFunction</find>
       <find>gloval</find>
       <find>shadow</find>
       <find>svg</find>
@@ -66,7 +78,6 @@
       <find>capture.</find>
       <find>vibrate</find>
       <find>fire</find>
-      <find>canvas</find>
       <find>stop</find>
       <find>this.canvas</find>
       <find>document.</find>
@@ -79,6 +90,10 @@
       <find>config</find>
       <find>deviceNotSupported</find>
       <find>document</find>
+      <find>window</find>
+      <find>canvas</find>
+      <find>height</find>
+      <find>create</find>
     </findStrings>
     <replaceStrings>
       <replace>this</replace>
@@ -148,8 +163,8 @@
         <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/index.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/components/StreamCapture/StreamCapture.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/Scanner.css" />
-        <option value="$PROJECT_DIR$/src/components/Scanner/Scanner.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/Scanner.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js" />
       </list>
     </option>
@@ -353,20 +368,7 @@
       <workItem from="1560933461391" duration="1762000" />
       <workItem from="1560937050449" duration="1149000" />
       <workItem from="1560996275665" duration="624000" />
-    </task>
-    <task id="LOCAL-00011" summary="Delete unused js file&#10;The js file name is initPerceptionToolkit.">
-      <created>1560333482514</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1560333482514</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Relocate perception toolkit folder to scanner comp dir&#10;For tracing and modification purpose.">
-      <created>1560396881254</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1560396881254</updated>
+      <workItem from="1561018552288" duration="189000" />
     </task>
     <task id="LOCAL-00013" summary="Fix eslint issues">
       <created>1560397390151</created>
@@ -697,14 +699,28 @@
       <option name="project" value="LOCAL" />
       <updated>1561016137477</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Update codes to renew html elements attribute">
+      <created>1561017135859</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1561017135860</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Use created canvas using document then append to child of container&#10;Instead of ref canvas.">
+      <created>1561017813248</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1561017813248</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175212000" />
+    <option name="totallyTimeSpent" value="176718000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15829694" />
@@ -721,7 +737,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2533197" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24412666" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.6128703" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -785,8 +801,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Remove unused code&#10;Deleted addEventListeners function and change some perception toolkit config." />
-    <MESSAGE value="Console log some promises&#10;Returned by importPerceptionToolkit and initScanner function." />
     <MESSAGE value="Fix console log pending result" />
     <MESSAGE value="Refactor Scanner component&#10;Move importPerceptionToolkit to index file." />
     <MESSAGE value="Remove done and add new TODOs" />
@@ -810,31 +824,11 @@
     <MESSAGE value="Clean up index js file&#10;Rearrange codes." />
     <MESSAGE value="Trace code using console log&#10;Looking for bugs and unused var to improve performance and more readable code." />
     <MESSAGE value="Remove redundant codes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove redundant codes" />
+    <MESSAGE value="Update codes to renew html elements attribute" />
+    <MESSAGE value="Use created canvas using document then append to child of container&#10;Instead of ref canvas." />
+    <option name="LAST_COMMIT_MESSAGE" value="Use created canvas using document then append to child of container&#10;Instead of ref canvas." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/clamp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding>
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#905#906#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/perception-toolkit/lib/perception-toolkit/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1533">
-          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
-          <folding>
-            <element signature="e#608#669#0" expanded="true" />
-            <element signature="e#1576#1626#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/PerceptionToolkit.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/bootstrap.d.ts" />
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/polyfill/barcode-detector_worker.d.ts" />
@@ -1020,16 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Home/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/Scanner.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -1051,16 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Scanner/Scanner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-174">
-          <caret line="31" column="50" lean-forward="true" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/overlay/overlay.template.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1075,6 +1049,10 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js.map">
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1082,10 +1060,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="248" column="59" lean-forward="true" selection-start-line="248" selection-start-column="26" selection-end-line="248" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Home/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/Scanner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="216" column="81" lean-forward="true" selection-start-line="216" selection-start-column="81" selection-end-line="216" selection-end-column="81" />
+        <state relative-caret-position="498">
+          <caret line="227" lean-forward="true" selection-start-line="227" selection-end-line="227" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
