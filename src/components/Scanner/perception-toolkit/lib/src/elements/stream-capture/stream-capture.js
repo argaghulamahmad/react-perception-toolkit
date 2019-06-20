@@ -209,12 +209,12 @@ export class StreamCapture {
             if (!maskOuter || !maskInner || !reticleBox) {
                 return;
             }
-            maskOuter.setAttribute('width', '100');
-            maskOuter.setAttribute('height', '133');
-            maskInner.setAttribute('x', '8');
-            maskInner.setAttribute('y', '24');
-            reticleBox.setAttribute('width', '100');
-            reticleBox.setAttribute('height', '133');
+            maskOuter.setAttribute('width', maskOuter.style.height.toString());
+            maskOuter.setAttribute('height', maskOuter.style.width.toString());
+            maskInner.setAttribute('x', maskInner.y.baseVal.value.toString());
+            maskInner.setAttribute('y', maskInner.x.baseVal.value.toString());
+            reticleBox.setAttribute('width', reticleBox.style.height.toString());
+            reticleBox.setAttribute('height', reticleBox.style.width.toString());
         }
         reticle.style.opacity = '1';
     }

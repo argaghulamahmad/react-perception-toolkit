@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83c92675-d3bd-4076-8851-4b0e0e196a62" name="Default Changelist" comment="Trace code using console log&#10;Looking for bugs and unused var to improve performance and more readable code.">
+    <list default="true" id="83c92675-d3bd-4076-8851-4b0e0e196a62" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/perception-toolkit/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="213" column="45" lean-forward="true" selection-start-line="213" selection-start-column="45" selection-end-line="213" selection-end-column="45" />
+            <state relative-caret-position="393">
+              <caret line="216" column="81" lean-forward="true" selection-start-line="216" selection-start-column="81" selection-end-line="216" selection-end-column="81" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -353,13 +353,6 @@
       <workItem from="1560933461391" duration="1762000" />
       <workItem from="1560937050449" duration="1149000" />
       <workItem from="1560996275665" duration="624000" />
-    </task>
-    <task id="LOCAL-00010" summary="Refactor Code&#10;Import perception toolkit directly into Scanner component.">
-      <created>1560333416462</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1560333416462</updated>
     </task>
     <task id="LOCAL-00011" summary="Delete unused js file&#10;The js file name is initPerceptionToolkit.">
       <created>1560333482514</created>
@@ -697,17 +690,24 @@
       <option name="project" value="LOCAL" />
       <updated>1561014509508</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Remove redundant codes">
+      <created>1561016137477</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1561016137477</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174248000" />
+    <option name="totallyTimeSpent" value="175212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15829694" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15829694" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -721,7 +721,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2533197" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2533197" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.6128703" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -785,7 +785,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Create some services script and use it as callback&#10;Then run the callback if onMarkerFound evt triggered." />
     <MESSAGE value="Remove unused code&#10;Deleted addEventListeners function and change some perception toolkit config." />
     <MESSAGE value="Console log some promises&#10;Returned by importPerceptionToolkit and initScanner function." />
     <MESSAGE value="Fix console log pending result" />
@@ -810,7 +809,8 @@
     <MESSAGE value="Fix bugs caused by refs typo" />
     <MESSAGE value="Clean up index js file&#10;Rearrange codes." />
     <MESSAGE value="Trace code using console log&#10;Looking for bugs and unused var to improve performance and more readable code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Trace code using console log&#10;Looking for bugs and unused var to improve performance and more readable code." />
+    <MESSAGE value="Remove redundant codes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove redundant codes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/utils/clamp.js">
@@ -1084,8 +1084,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="213" column="45" lean-forward="true" selection-start-line="213" selection-start-column="45" selection-end-line="213" selection-end-column="45" />
+        <state relative-caret-position="393">
+          <caret line="216" column="81" lean-forward="true" selection-start-line="216" selection-start-column="81" selection-end-line="216" selection-end-column="81" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
