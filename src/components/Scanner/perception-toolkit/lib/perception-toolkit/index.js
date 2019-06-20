@@ -21,7 +21,7 @@ let hintTimeout;
 const {layoutRefs} = window.PerceptionToolkit.StreamCapture;
 console.log('layoutRefs', layoutRefs);
 
-const { container, reticle, reticleBox, maskOuter, maskInner, canvas } = layoutRefs;
+const {container, reticle, reticleBox, maskOuter, maskInner, canvas} = layoutRefs;
 
 enableLogLevel(DEBUG_LEVEL.ERROR);
 
@@ -102,28 +102,8 @@ async function initializeExperience() {
     window.PerceptionToolkit.Functions.closeExperience = close;
 
     // Start detection
-    let detection = beginDetection(detectionMode);
-    console.log('detection', detection)}
-
-/*
-    Bootstrap function
-*/
-(async function () {
-    console.log('iifBootstrap', this);
-
-    const supported = await deviceSupportTest;
-    console.log('supported', supported);
-
-    if (!supported) {
-        alert('Sorry, this browser does not support the required features');
-        return;
-    }
-    initializeExperience();
-
-    window.addEventListener(captureStopped, () => {
-        console.log('captureStopped', this)
-    });
-})();
+    beginDetection(detectionMode).then('beginDetection');
+}
 
 /**
  * Begin Detection
@@ -307,10 +287,7 @@ function onConnectivityChanged() {
     console.log('onConnectivityChanged', this);
 
     const connected = navigator.onLine;
-    console.log('connected', connected);
-    const capture = document.body.querySelector(StreamCapture.defaultTagName);
-    console.log('documentCapture', capture);
-    if (!capture) {
+    if (!container) {
         return;
     }
     if (!connected) {
@@ -319,3 +296,16 @@ function onConnectivityChanged() {
         hideOverlay();
     }
 }
+
+/*
+    Bootstrap function
+*/
+(async function () {
+    console.log('iifBootstrap', this);
+
+    initializeExperience();
+
+    window.addEventListener(captureStopped, () => {
+        console.log('captureStopped', this)
+    });
+})();
