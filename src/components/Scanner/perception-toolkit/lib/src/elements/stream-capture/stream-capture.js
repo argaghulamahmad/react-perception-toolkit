@@ -74,7 +74,7 @@ export class StreamCapture {
          * Whether to pause the frame.
          */
         this.paused = false;
-        this.root = document.getElementById('stream-capture-container');
+        this.root = this.containerRef;
         this.lastCapture = -1;
         this.root.addEventListener('click', (evt) => {
             const clicked = evt.path ? evt.path[0] : evt.composedPath()[0];
@@ -83,6 +83,19 @@ export class StreamCapture {
             }
             fire(closeEvent, this.root);
         });
+
+        const {layoutRefs} = window.PerceptionToolkit.StreamCapture;
+        console.log('layoutRefs', layoutRefs);
+
+        const { container, reticle, reticleBox, maskOuter, maskInner, canvas } = layoutRefs;
+        this.containerRef = container;
+        this.reticleRef = reticle;
+        this.reticleBoxRef = reticleBox;
+        this.maskOuterRef = maskOuter;
+        this.maskInnerRef = maskInner;
+        this.canvasRef = canvas;
+
+        console.log('StreamCaptureConstructor', this);
     }
 
     /**
@@ -96,6 +109,8 @@ export class StreamCapture {
      * Starts the capture of the stream.
      */
     start(stream) {
+        console.log('stream');
+
         if (this.stream) {
             throw new Error('Stream already provided. Stop the capture first.');
         }
@@ -141,7 +156,7 @@ export class StreamCapture {
             }
 
             console.log(window.innerHeight.toString());
-            const streamCaptureCanvas = document.querySelector("#stream-capture-canvas");
+            const streamCaptureCanvas = this.canvas;
             streamCaptureCanvas.style.height = window.innerHeight.toString() + 'px';
 
             this.canvas.width = this.video.videoWidth * this.captureScale;
@@ -211,16 +226,16 @@ export class StreamCapture {
     }
 
     setReticleOrientation(vertical) {
-        const reticle = this.root.querySelector('#reticle');
+        const reticle = this.reticleRef;
 
         if (!reticle) {
             return;
         }
         if (vertical) {
             reticle.setAttribute('viewBox', '0 0 100 133');
-            const maskOuter = reticle.querySelector('#reticle-cut-out-outer');
-            const maskInner = reticle.querySelector('#reticle-cut-out-inner');
-            const reticleBox = reticle.querySelector('#reticle-box');
+            const maskOuter = this.maskOuterRef;
+            const maskInner = this.maskInnerRef;
+            const reticleBox = this.reticleBoxRef;
 
             if (!maskOuter || !maskInner || !reticleBox) {
                 return;
@@ -239,7 +254,7 @@ export class StreamCapture {
         console.log('stream-capture root', this.root);
 
         if (!this.canvas) {
-            this.canvas = document.getElementById('stream-capture-canvas');
+            this.canvas = this.canvasRef;
             this.ctx = this.canvas.getContext('2d');
 
             if (!this.ctx) {

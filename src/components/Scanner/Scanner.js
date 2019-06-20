@@ -6,7 +6,13 @@ import './Scanner.css'
 class Scanner extends Component {
     constructor(props) {
         super(props);
+
         this.container = React.createRef();
+        this.reticle = React.createRef();
+        this.reticleBox = React.createRef();
+        this.maskOuter = React.createRef();
+        this.maskInner = React.createRef();
+        this.canvas = React.createRef();
     };
 
     componentDidMount() {
@@ -19,6 +25,17 @@ class Scanner extends Component {
                 callback: redirectToTokopediaPage,
                 container: this.container.current
             };
+
+            window.PerceptionToolkit.StreamCapture = {
+                layoutRefs: {
+                    container: this.container.current,
+                    reticle: this.reticle,
+                    reticleBox: this.reticleBox.current,
+                    maskOuter: this.maskOuter.current,
+                    maskInner: this.maskInner.current,
+                    canvas: this.canvas.current
+                }
+            };
         };
 
         importPerceptionToolkit().then(console.log('importPerceptionToolkit', this));
@@ -28,18 +45,18 @@ class Scanner extends Component {
     render() {
         return (
             <div id='stream-capture-container' ref={this.container}>
-                <svg id="reticle" viewBox="0 0 133 100"
+                <svg ref={this.reticle} id="reticle" viewBox="0 0 133 100"
                      xmlns="http://www.w3.org/2000/svg">
                     <mask id="reticle-cut-out">
                         <rect id="reticle-cut-out-outer" width="133" height="100" x="0" y="0"
-                              fill="#FFF"/>
+                              fill="#FFF" ref={this.maskOuter} />
                         <rect id="reticle-cut-out-inner" x="24" y="8" width="85" height="85" rx="2"
-                              ry="2" fill="#000"/>
+                              ry="2" fill="#000" ref={this.maskInner}/>
                     </mask>
-                    <rect id="reticle-box" width="133" height="100" x="0" y="0"
+                    <rect id="reticle-box" ref={this.reticleBox} width="133" height="100" x="0" y="0"
                           fill="rgba(0,0,0,0.4)" mask="url(#reticle-cut-out)"/>
                 </svg>
-                <canvas id='stream-capture-canvas'/>
+                <canvas ref={this.canvas} id='stream-capture-canvas'/>
             </div>
         );
     }
