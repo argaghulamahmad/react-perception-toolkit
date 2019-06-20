@@ -8,7 +8,6 @@ import {hideOverlay, showOverlay} from '../src/elements/overlay/overlay.js';
 import {closeEvent, frameEvent, StreamCapture} from '../src/elements/stream-capture/stream-capture.js';
 import {supportsEnvironmentCamera} from '../src/utils/environment-camera.js';
 import {DEBUG_LEVEL, enableLogLevel, log} from '../src/utils/logger.js';
-import {vibrate} from '../src/utils/vibrate.js';
 
 const {config} = window.PerceptionToolkit;
 const deviceNotSupported = 'pt.devicenotsupported';
@@ -192,8 +191,6 @@ async function onMarkerFound(evt) {
     window.PerceptionToolkit.CapturedContent.detail = barcodeContent;
 
     //TODO implement handle marker discovery, as an example connect this function with a web service
-
-    vibrate(200);
 }
 
 let hintTimeout;
