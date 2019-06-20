@@ -114,10 +114,10 @@ async function initializeExperience() {
 */
 const detectedMarkers = new Map();
 
-/*
-Register custom elements.
-*/
-customElements.define(StreamCapture.defaultTagName, StreamCapture);
+// /*
+// Register custom elements.
+// */
+// customElements.define(StreamCapture.defaultTagName, StreamCapture);
 
 /*
 Register events.
@@ -209,7 +209,7 @@ async function createStreamCapture(detectionMode) {
         capture.captureRate = 600;
     } else {
         showOverlay('Tap to capture');
-        capture.addEventListener('click', async () => {
+        capture.root.addEventListener('click', async () => {
             capture.paused = true;
             showOverlay('Processing...');
             const imgData = await capture.captureFrame();
@@ -217,9 +217,9 @@ async function createStreamCapture(detectionMode) {
         });
     }
 
-    capture.captureScale = 0.8;
-    capture.addEventListener(closeEvent, close);
-    capture.addEventListener(markerDetect, onMarkerFound);
+    capture.root.captureScale = 0.8;
+    capture.root.addEventListener(closeEvent, close);
+    capture.root.addEventListener(markerDetect, onMarkerFound);
 
     const streamOpts = {
         video: {

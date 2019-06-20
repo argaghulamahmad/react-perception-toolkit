@@ -47,10 +47,9 @@ export const closeEvent = 'pt.captureclose';
  * });
  * ```
  */
-export class StreamCapture extends HTMLElement {
+export class StreamCapture {
 
     constructor() {
-        super();
         /**
          * The sample scale, intended to go between `0` and `1` (though clamped only
          * to `0` in case you wish to sample at a larger scale).
@@ -82,7 +81,7 @@ export class StreamCapture extends HTMLElement {
             if (clicked.id !== 'close') {
                 return;
             }
-            fire(closeEvent, this);
+            fire(closeEvent, this.root);
         });
     }
 
@@ -156,7 +155,7 @@ export class StreamCapture extends HTMLElement {
             }
             requestAnimationFrame((now) => {
                 update(now);
-                fire(startEvent, this);
+                fire(startEvent, this.root);
             });
         }, {once: true});
     }
@@ -178,14 +177,14 @@ export class StreamCapture extends HTMLElement {
                 imgData.src = canvas.toDataURL('image/png');
                 imgData.onload = () => {
                     if (this.captureRate !== 0) {
-                        fire(frameEvent, this, {imgData});
+                        fire(frameEvent, this.root, {imgData});
                     }
                     resolve(imgData);
                 };
             } else {
                 imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
                 if (this.captureRate !== 0) {
-                    fire(frameEvent, this, {imgData});
+                    fire(frameEvent, this.root, {imgData});
                 }
                 resolve(imgData);
             }
@@ -209,7 +208,7 @@ export class StreamCapture extends HTMLElement {
         this.stream = undefined;
         this.canvas = undefined;
         this.ctx = undefined;
-        fire(stopEvent, this);
+        fire(stopEvent, this).root;
     }
 
     setReticleOrientation(vertical) {
@@ -254,10 +253,3 @@ export class StreamCapture extends HTMLElement {
         }
     }
 }
-
-/**
- * The StreamCapture's default tag name for registering with
- * `customElements.define`.
- */
-StreamCapture.defaultTagName = 'stream-capture';
-//# sourceMappingURL=stream-capture.js.map
