@@ -120,9 +120,6 @@ export class StreamCapture {
                 throw new Error('Video has width or height of 0');
             }
 
-            const streamCaptureCanvas = this.canvas;
-            streamCaptureCanvas.style.height = window.innerHeight.toString() + 'px';
-
             this.canvas.width = this.video.videoWidth * this.captureScale;
             this.canvas.height = this.video.videoHeight * this.captureScale;
             this.setReticleOrientation(this.canvas.height > this.canvas.width);
