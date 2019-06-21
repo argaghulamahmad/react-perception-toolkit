@@ -184,6 +184,7 @@ export class StreamCapture {
             track.stop();
         }
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.canvas.remove();
         this.video = undefined;
         this.stream = undefined;
         this.canvas = undefined;
