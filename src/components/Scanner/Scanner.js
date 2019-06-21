@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {redirectToTokopediaPage} from "./services/services";
 import {importPerceptionToolkit} from "./perception-toolkit";
 import './Scanner.css'
+import Overlay from "./components/Overlay/Overlay";
 
 class Scanner extends Component {
     constructor(props) {
@@ -42,18 +43,21 @@ class Scanner extends Component {
 
     render() {
         return (
-            <div id='stream-capture-container' ref={this.container}>
-                <svg ref={this.reticle} id="reticle" viewBox="0 0 133 100"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <mask id="reticle-cut-out">
-                        <rect id="reticle-cut-out-outer" width="133" height="100" x="0" y="0"
-                              fill="#FFF" ref={this.maskOuter} />
-                        <rect id="reticle-cut-out-inner" x="24" y="8" width="85" height="85" rx="2"
-                              ry="2" fill="#000" ref={this.maskInner}/>
-                    </mask>
-                    <rect id="reticle-box" ref={this.reticleBox} width="133" height="100" x="0" y="0"
-                          fill="rgba(0,0,0,0.4)" mask="url(#reticle-cut-out)"/>
-                </svg>
+            <div>
+                <Overlay message="Arahkan kode QR ke area yang telah ditentukan"/>
+                <div id='stream-capture-container' ref={this.container}>
+                    <svg ref={this.reticle} id="reticle" viewBox="0 0 133 100"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <mask id="reticle-cut-out">
+                            <rect id="reticle-cut-out-outer" width="133" height="100" x="0" y="0"
+                                  fill="#FFF" ref={this.maskOuter}/>
+                            <rect id="reticle-cut-out-inner" x="24" y="8" width="85" height="85" rx="2"
+                                  ry="2" fill="#000" ref={this.maskInner}/>
+                        </mask>
+                        <rect id="reticle-box" ref={this.reticleBox} width="133" height="100" x="0" y="0"
+                              fill="rgba(0,0,0,0.4)" mask="url(#reticle-cut-out)"/>
+                    </svg>
+                </div>
             </div>
         );
     }

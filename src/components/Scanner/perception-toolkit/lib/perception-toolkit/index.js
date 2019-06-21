@@ -4,7 +4,6 @@ import {WasmSupport} from '../src/support/wasm.js';
 import {fire} from '../src/utils/fire.js';
 import {cameraAccessDenied, captureClosed, captureStopped, markerChanges, markerDetect} from './events.js';
 import {detectBarcodes} from '../src/detectors/barcode.js';
-import {hideOverlay, showOverlay} from '../src/elements/overlay/overlay.js';
 import {closeEvent, frameEvent, StreamCapture} from '../src/elements/stream-capture/stream-capture.js';
 import {supportsEnvironmentCamera} from '../src/utils/environment-camera.js';
 import {DEBUG_LEVEL, enableLogLevel, log} from '../src/utils/logger.js';
@@ -156,10 +155,10 @@ async function createStreamCapture(detectionMode) {
     if (detectionMode === 'passive') {
         capture.captureRate = 600;
     } else {
-        showOverlay('Tap to capture');
+        console.log('Tap to capture');
         capture.root.addEventListener('click', async () => {
             capture.paused = true;
-            showOverlay('Processing...');
+            console.log('Processing...');
             const imgData = await capture.captureFrame();
             fire(frameEvent, capture, {imgData, detectionMode});
         });
@@ -205,7 +204,7 @@ async function createStreamCapture(detectionMode) {
         });
         capture.start(stream);
         hintTimeout = setTimeout(() => {
-            showOverlay('Make sure the marker is inside the box.');
+            console.log('Make sure the marker is inside the box.');
         }, config.hintTimeout || 5000);
     } catch (e) {
         // User has denied or there are no cameras.
@@ -218,7 +217,6 @@ export function close() {
 
     capture.stop();
     capture.remove();
-    hideOverlay();
     clearTimeout(hintTimeout);
 }
 
@@ -257,9 +255,9 @@ async function onCaptureFrame(evt) {
     if (markers.length > 0) {
         // Hide the hint if it's shown. Cancel it if it's pending.
         clearTimeout(hintTimeout);
-        hideOverlay();
+        console.log('Marker length > 0');
     } else if (detectionMode && detectionMode === 'active') {
-        showOverlay('No markers found');
+        console.log('No markers found');
     }
     capture.paused = false;
 
@@ -291,9 +289,9 @@ function onConnectivityChanged() {
         return;
     }
     if (!connected) {
-        showOverlay('Currently offline. Please reconnect to the network.');
+        console.log('Currently offline. Please reconnect to the network.');
     } else {
-        hideOverlay();
+        console.log('Already online.')
     }
 }
 
