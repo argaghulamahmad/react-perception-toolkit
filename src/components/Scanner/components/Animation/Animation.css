@@ -1,0 +1,10 @@
+.animation.up {
+    transition: all 1s ease 0s;
+    opacity: 1;
+    y: 8;
+}
+
+.animation.down {
+    transition: all 1s ease 0s;
+    opacity: 0;
+}
