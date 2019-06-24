@@ -45,7 +45,7 @@ class Scanner extends Component {
 
     render() {
         return (
-            <div id={'stream-capture'}>
+            <div id={'scanner'}>
                 <Overlay message="Arahkan kode QR ke area yang telah ditentukan"/>
                 <div id='stream-capture-container' ref={this.container}>
                     <svg ref={this.reticle} id="reticle" viewBox="0 0 133 100"
