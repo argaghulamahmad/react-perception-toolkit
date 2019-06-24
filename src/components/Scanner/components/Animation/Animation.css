@@ -19,5 +19,5 @@
 
 
 rect.animation {
-    animation: scanning 1s ease-in alternate infinite;
+    animation: scanning 4s ease-in alternate infinite;
 }
