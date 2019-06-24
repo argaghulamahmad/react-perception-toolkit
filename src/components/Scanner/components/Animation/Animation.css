@@ -1,10 +1,23 @@
-.animation.up {
-    transition: all 1s ease 0s;
-    opacity: 1;
-    y: 8;
+@keyframes scanning {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        y: 8
+    }
 }
 
-.animation.down {
-    transition: all 1s ease 0s;
-    opacity: 0;
+
+rect.animation {
+    animation: scanning 1s ease-in alternate infinite;
 }
