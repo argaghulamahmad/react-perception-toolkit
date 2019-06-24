@@ -199,19 +199,6 @@ export class StreamCapture {
         }
         if (vertical) {
             reticle.setAttribute('viewBox', '0 0 100 133');
-            const maskOuter = this.maskOuterRef;
-            const maskInner = this.maskInnerRef;
-            const reticleBox = this.reticleBoxRef;
-
-            if (!maskOuter || !maskInner || !reticleBox) {
-                return;
-            }
-            maskOuter.setAttribute('width', '100');
-            maskOuter.setAttribute('height', '133');
-            maskInner.setAttribute('x', '8');
-            maskInner.setAttribute('y', '24');
-            reticleBox.setAttribute('width', '100');
-            reticleBox.setAttribute('height', '133');
         }
         reticle.style.opacity = '1';
     }
