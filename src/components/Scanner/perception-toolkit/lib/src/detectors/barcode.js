@@ -13,11 +13,11 @@ export async function detectBarcodes(data, {context = window, forceNewDetector =
         log('Using barcode detection polyfill', DEBUG_LEVEL.INFO, 'BarcodeDetector');
         await injectScript(`${polyfillPrefix}/lib/polyfills/barcode-detector.js`);
     }
-    
+
     if (!detector || forceNewDetector) {
         detector = new context.BarcodeDetector();
     }
-    
+
     if ('isReady' in detector) {
         await detector.isReady;
     }
