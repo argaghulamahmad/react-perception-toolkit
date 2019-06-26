@@ -10,7 +10,6 @@ class Scanner extends Component {
         super(props);
 
         this.container = React.createRef();
-        this.canvas = React.createRef();
     };
 
     componentDidMount() {
@@ -26,8 +25,7 @@ class Scanner extends Component {
 
             window.PerceptionToolkit.StreamCapture = {
                 layoutRefs: {
-                    container: this.container.current,
-                    canvas: this.canvas.current
+                    container: this.container.current
                 }
             };
         };
@@ -58,12 +56,12 @@ class Scanner extends Component {
             <div id={'scanner'}>
                 <Overlay message="Arahkan kode QR ke area yang telah ditentukan"/>
                 <div id='stream-capture-container' ref={this.container}>
-                    <canvas/>
                     <svg ref={this.reticle} id="reticle" viewBox="0 0 133 100"
                          xmlns="http://www.w3.org/2000/svg">
                         <ReticleBox/>
                         <Animation/>
                     </svg>
+                    <canvas id="capture-canvas"/>
                 </div>
             </div>
         );

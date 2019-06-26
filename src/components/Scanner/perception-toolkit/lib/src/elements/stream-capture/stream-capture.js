@@ -179,9 +179,7 @@ export class StreamCapture {
     initElementsIfNecessary() {
         console.log('initElementsIfNecessary', this.root);
 
-        const {canvas} = window.PerceptionToolkit.StreamCapture;
-
-        this.canvas = canvas;
+        this.canvas = document.getElementById('capture-canvas');
         this.ctx = this.canvas.getContext('2d');
 
         if (!this.ctx) {
