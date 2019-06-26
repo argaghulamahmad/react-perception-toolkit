@@ -20,7 +20,7 @@ let hintTimeout;
 const {layoutRefs} = window.PerceptionToolkit.StreamCapture;
 console.log('layoutRefs', layoutRefs);
 
-const {container, reticle, reticleBox, maskOuter, maskInner, canvas} = layoutRefs;
+const {container} = layoutRefs;
 
 enableLogLevel(DEBUG_LEVEL.ERROR);
 
