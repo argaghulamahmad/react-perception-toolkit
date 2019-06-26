@@ -48,10 +48,15 @@ class Scanner extends Component {
             await import('./perception-toolkit/lib/perception-toolkit')
                 .then(module => {
                     console.log('perceptionToolkit installed!', {module});
-                })
+                });
+            window.PerceptionToolkit.Functions.initializeExperience();
         };
 
         importPerceptionToolkit();
+    }
+
+    componentWillUnmount() {
+        window.PerceptionToolkit.Functions.closeExperience();
     }
 
     render() {

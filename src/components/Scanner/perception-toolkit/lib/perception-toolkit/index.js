@@ -216,7 +216,6 @@ export function close() {
     console.log('close', this);
 
     capture.stop();
-    capture.remove();
     clearTimeout(hintTimeout);
 }
 
@@ -294,16 +293,3 @@ function onConnectivityChanged() {
         console.log('Already online.')
     }
 }
-
-/*
-    Bootstrap function
-*/
-(async function () {
-    console.log('iifBootstrap', this);
-
-    initializeExperience();
-
-    window.addEventListener(captureStopped, () => {
-        console.log('captureStopped', this)
-    });
-})();
