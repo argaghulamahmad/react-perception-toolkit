@@ -213,8 +213,10 @@ async function createStreamCapture(detectionMode) {
 }
 
 export function close() {
-    console.log('close', this);
+    console.log('closeExperience', this);
+    window.PerceptionToolkit.StreamCapture.layoutRefs = {
 
+    };
     capture.stop();
     clearTimeout(hintTimeout);
 }

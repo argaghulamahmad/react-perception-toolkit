@@ -50,22 +50,9 @@ export class StreamCapture {
         const {layoutRefs} = window.PerceptionToolkit.StreamCapture;
         console.log('layoutRefs', layoutRefs);
 
-        const {container, reticle, reticleBox, maskOuter, maskInner} = layoutRefs;
-        this.containerRef = container;
-        this.reticleRef = reticle;
-        this.reticleBoxRef = reticleBox;
-        this.maskOuterRef = maskOuter;
-        this.maskInnerRef = maskInner;
-
-        this.root = this.containerRef;
+        const {container} = layoutRefs;
+        this.root = container;
         this.lastCapture = -1;
-        this.root.addEventListener('click', (evt) => {
-            const clicked = evt.path ? evt.path[0] : evt.composedPath()[0];
-            if (clicked.id !== 'close') {
-                return;
-            }
-            fire(closeEvent, this.root);
-        });
 
         console.log('StreamCapture', this);
     }
@@ -74,7 +61,7 @@ export class StreamCapture {
      * Starts the capture of the stream.
      */
     start(stream) {
-        console.log('stream');
+        console.log('startStream');
 
         if (this.stream) {
             throw new Error('Stream already provided. Stop the capture first.');
@@ -122,7 +109,7 @@ export class StreamCapture {
 
             this.canvas.width = this.video.videoWidth * this.captureScale;
             this.canvas.height = this.video.videoHeight * this.captureScale;
-            this.setReticleOrientation(this.canvas.height > this.canvas.width);
+
             // Flip the canvas if -- say -- the camera is pointing at the user.
             if (this.flipped) {
                 this.ctx.translate(this.canvas.width * 0.5, 0);
@@ -172,7 +159,8 @@ export class StreamCapture {
      * Stops the stream.
      */
     stop() {
-        console.log('stop', this);
+        console.log('stopStreamCapture', this);
+
         if (!this.stream || !this.ctx || !this.canvas) {
             return;
         }
@@ -181,7 +169,6 @@ export class StreamCapture {
             track.stop();
         }
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        this.canvas.remove();
         this.video = undefined;
         this.stream = undefined;
         this.canvas = undefined;
@@ -189,31 +176,16 @@ export class StreamCapture {
         fire(stopEvent, this.root);
     }
 
-    setReticleOrientation(vertical) {
-        console.log('setReticleOrientation');
-
-        const reticle = this.reticleRef;
-
-        if (!reticle) {
-            return;
-        }
-        if (vertical) {
-            reticle.setAttribute('viewBox', '0 0 100 133');
-        }
-        reticle.style.opacity = '1';
-    }
-
     initElementsIfNecessary() {
         console.log('initElementsIfNecessary', this.root);
 
-        if (!this.canvas) {
-            this.canvas = document.createElement('canvas');
-            this.containerRef.appendChild(this.canvas);
-            this.ctx = this.canvas.getContext('2d');
+        const {canvas} = window.PerceptionToolkit.StreamCapture;
 
-            if (!this.ctx) {
-                throw new Error('Unable to create canvas context');
-            }
+        this.canvas = canvas;
+        this.ctx = this.canvas.getContext('2d');
+
+        if (!this.ctx) {
+            throw new Error('Unable to create canvas context');
         }
 
         if (!this.video) {
