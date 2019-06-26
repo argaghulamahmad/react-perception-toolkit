@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ReticleBox(props) {
+function ReticleBox() {
     return (
         <svg viewBox="0 0 133 100">
             <mask id="reticle-cut-out">
