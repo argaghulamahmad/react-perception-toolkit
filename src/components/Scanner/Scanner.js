@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {redirectToTokopediaPage} from "./services/services";
-import {importPerceptionToolkit} from "./perception-toolkit";
 import './Scanner.css'
 import Overlay from "./components/Overlay/Overlay";
 import Animation from "./components/Animation/Animation";
@@ -20,7 +19,7 @@ class Scanner extends Component {
     componentDidMount() {
         console.log('didMount', this);
 
-        const initPerceptionToolkit = async () => {
+        const configPerceptionToolkit = async () => {
             window.PerceptionToolkit = window.PerceptionToolkit || {};
             window.PerceptionToolkit.config = {
                 debugLevel: 'verbose',
@@ -39,8 +38,20 @@ class Scanner extends Component {
             };
         };
 
-        importPerceptionToolkit().then(console.log('importPerceptionToolkit', this));
-        initPerceptionToolkit().then(console.log('configPerceptionToolkit', this));
+        configPerceptionToolkit().then(console.log('configPerceptionToolkit', this));
+
+        const importPerceptionToolkit = async () => {
+            await import('./perception-toolkit/lib/src/polyfill/barcode-detector')
+                .then(module => {
+                    window.BarcodeDetector = module.BarcodeDetectorPolyfill
+                });
+            await import('./perception-toolkit/lib/perception-toolkit')
+                .then(module => {
+                    console.log('perceptionToolkit installed!', {module});
+                })
+        };
+
+        importPerceptionToolkit();
     }
 
     render() {
