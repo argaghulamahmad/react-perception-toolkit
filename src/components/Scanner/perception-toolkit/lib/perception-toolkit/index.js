@@ -98,7 +98,7 @@ async function initializeExperience() {
     const {detectionMode = 'passive'} = config;
 
     // Now the experience has begun, update the closeExperience fn.
-    window.PerceptionToolkit.Functions.closeExperience = close;
+    window.PerceptionToolkit.Functions.closeExperience = closeExperience;
 
     // Start detection
     beginDetection(detectionMode).then('beginDetection');
@@ -165,7 +165,7 @@ async function createStreamCapture(detectionMode) {
     }
 
     capture.root.captureScale = 0.8;
-    capture.root.addEventListener(closeEvent, close);
+    capture.root.addEventListener(closeEvent, closeExperience);
     capture.root.addEventListener(markerDetect, onMarkerFound);
 
     const streamOpts = {
@@ -212,7 +212,7 @@ async function createStreamCapture(detectionMode) {
     }
 }
 
-export function close() {
+export function closeExperience() {
     console.log('closeExperience', this);
     capture.stop();
     clearTimeout(hintTimeout);
