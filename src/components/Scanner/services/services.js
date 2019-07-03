@@ -5,6 +5,6 @@ export const redirectToTokopediaPage = url => {
     if (anyTokopediaLinkRegex.test(url)) {
         window.open(url, '_blank');
     } else {
-        alert('Kode QR yang Anda scan invalid')
+        alert('Wasm Scanner - Kode QR yang Anda scan invalid')
     }
 };

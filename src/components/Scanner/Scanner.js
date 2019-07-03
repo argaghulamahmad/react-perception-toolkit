@@ -59,7 +59,7 @@ class Scanner extends Component {
                     <svg ref={this.reticle} id="reticle" viewBox="0 0 133 100"
                          xmlns="http://www.w3.org/2000/svg">
                         <ReticleBox/>
-                        <Animation/>
+                        {/*<Animation/>*/}
                     </svg>
                     <canvas id="capture-canvas"/>
                 </div>
