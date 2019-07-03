@@ -1,14 +1,39 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
-import ReticleBox from "../Scanner/components/ReticleBox/ReticleBox";
-import Animation from "../Scanner/components/Animation/Animation";
 import Overlay from "../Scanner/components/Overlay/Overlay";
 import "./ScannerJs.css"
 
+const times = [];
+let fpsCounter;
+
+const refreshLoop = () => {
+    window.requestAnimationFrame(() => {
+        const now = performance.now();
+        while (times.length > 0 && times[0] <= now - 1000) {
+            times.shift();
+        }
+        times.push(now);
+        fpsCounter = times.length;
+        refreshLoop();
+    });
+};
+
+refreshLoop();
+
 class ScannerJs extends Component {
     state = {
-        result: 'No result'
+        fps: 0
     };
+
+    updateFps= () => {
+        this.setState({
+            fps: fpsCounter
+        })
+    };
+
+    componentDidMount() {
+        setInterval(this.updateFps, 1000);
+    }
 
     handleScan = data => {
         if (data) {
@@ -29,7 +54,7 @@ class ScannerJs extends Component {
                 "background": "#333",
                 "zIndex": "1"
             }}>
-                <Overlay message="Arahkan kode QR ke area yang telah ditentukan"/>
+                <Overlay message={"fps: " + this.state.fps}/>
                 <QrReader
                     delay={300}
                     onError={this.handleError}
