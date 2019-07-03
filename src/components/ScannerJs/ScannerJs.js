@@ -43,10 +43,18 @@ class ScannerJs extends Component {
                         "transform": "translateY(-50%)"
                     }}
                 />
-                <svg ref={this.reticle} id="reticle" viewBox="0 0 133 100"
+                <svg ref={this.reticle} id="reticle" viewBox="0 0 600 600"
                      xmlns="http://www.w3.org/2000/svg">
-                    <ReticleBox/>
-                    {/*<Animation/>*/}
+                    <svg viewBox="0 0 600 600">
+                        <mask id="reticle-cut-out">
+                            <rect id="reticle-cut-out-outer" width="600" height="600" x="0" y="0"
+                                  fill="#FFF"/>
+                            <rect id="reticle-cut-out-inner" x="10%" y="10%" width="500" height="500" rx="2"
+                                  ry="2" fill="#000"/>
+                        </mask>
+                        <rect id="reticle-box" width="600" height="600" x="0" y="0"
+                              fill="rgba(0,0,0,0.4)" mask="url(#reticle-cut-out)"/>
+                    </svg>
                 </svg>
             </div>
         )
