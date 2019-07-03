@@ -1,0 +1,7 @@
+div#scanner {
+    width: 50% !important;
+}
+
+div.overlay {
+    left: 25% !important;
+}
