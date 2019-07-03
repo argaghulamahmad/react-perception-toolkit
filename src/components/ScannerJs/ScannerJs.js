@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
 import Overlay from "../Scanner/components/Overlay/Overlay";
 import "./ScannerJs.css"
+import {redirectToTokopediaPage} from "../Scanner/services/services";
 
 const times = [];
 let fpsCounter;
@@ -37,9 +38,10 @@ class ScannerJs extends Component {
 
     handleScan = data => {
         if (data) {
-            alert('Js Scanner - Kode QR yang Anda scan invalid')
+            alert("JS SCANNER");
+            redirectToTokopediaPage(data);
         }
-    }
+    };
     handleError = err => {
         console.error(err)
     }
