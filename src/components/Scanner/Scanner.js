@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import {redirectToTokopediaPage} from "./services/services";
 import './Scanner.css'
 import Overlay from "./components/Overlay/Overlay";
-import Animation from "./components/Animation/Animation";
-import ReticleBox from "./components/ReticleBox/ReticleBox";
 
 const times = [];
 let fpsCounter;
@@ -84,14 +82,13 @@ class Scanner extends Component {
         return (
             <div id={'scanner'}>
                 <Overlay message="Arahkan kode QR ke area yang telah ditentukan"/>
-                {/*<Overlay message={"fps: " + this.state.fps}/>*/}
                 <div id='stream-capture-container' ref={this.container}>
-                    <svg ref={this.reticle} id="reticle" viewBox="0 0 133 100"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <ReticleBox/>
-                        <Animation/>
-                    </svg>
+                    <div className="square">
+                        <div className="square-inner"/>
+                        <div className="scan"/>
+                    </div>
                     <canvas id="capture-canvas"/>
+                    <video id="capture-video"/>
                 </div>
             </div>
         );

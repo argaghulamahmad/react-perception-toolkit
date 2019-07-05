@@ -187,7 +187,7 @@ export class StreamCapture {
         }
 
         if (!this.video) {
-            this.video = document.createElement('video');
+            this.video = document.getElementById('capture-video');
         }
     }
 }
