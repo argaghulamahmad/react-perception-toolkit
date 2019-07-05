@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {redirectToTokopediaPage} from "./services/services";
 import './Scanner.css'
 import Overlay from "./components/Overlay/Overlay";
-// import Animation from "./components/Animation/Animation";
+import Animation from "./components/Animation/Animation";
 import ReticleBox from "./components/ReticleBox/ReticleBox";
 
 const times = [];
@@ -29,15 +29,15 @@ class Scanner extends Component {
         this.container = React.createRef();
     };
 
-    state = {
+    /*state = {
         fps: 0
-    };
+    };*/
 
-    updateFps= () => {
+    /*updateFps= () => {
         this.setState({
             fps: fpsCounter
         })
-    };
+    };*/
 
     componentDidMount() {
         console.log('didMount', this);
@@ -73,7 +73,7 @@ class Scanner extends Component {
 
         importPerceptionToolkit();
 
-        setInterval(this.updateFps, 1000);
+        // setInterval(this.updateFps, 1000);
     }
 
     componentWillUnmount() {
@@ -83,13 +83,13 @@ class Scanner extends Component {
     render() {
         return (
             <div id={'scanner'}>
-                {/*<Overlay message="Arahkan kode QR ke area yang telah ditentukan"/>*/}
-                <Overlay message={"fps: " + this.state.fps}/>
+                <Overlay message="Arahkan kode QR ke area yang telah ditentukan"/>
+                {/*<Overlay message={"fps: " + this.state.fps}/>*/}
                 <div id='stream-capture-container' ref={this.container}>
                     <svg ref={this.reticle} id="reticle" viewBox="0 0 133 100"
                          xmlns="http://www.w3.org/2000/svg">
                         <ReticleBox/>
-                        {/*<Animation/>*/}
+                        <Animation/>
                     </svg>
                     <canvas id="capture-canvas"/>
                 </div>
