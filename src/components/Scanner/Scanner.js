@@ -3,39 +3,12 @@ import {redirectToTokopediaPage} from "./services/services";
 import './Scanner.css'
 import Overlay from "./components/Overlay/Overlay";
 
-const times = [];
-let fpsCounter;
-
-const refreshLoop = () => {
-    window.requestAnimationFrame(() => {
-        const now = performance.now();
-        while (times.length > 0 && times[0] <= now - 1000) {
-            times.shift();
-        }
-        times.push(now);
-        fpsCounter = times.length;
-        refreshLoop();
-    });
-};
-
-refreshLoop();
-
 class Scanner extends Component {
     constructor(props) {
         super(props);
 
         this.container = React.createRef();
     };
-
-    /*state = {
-        fps: 0
-    };*/
-
-    /*updateFps= () => {
-        this.setState({
-            fps: fpsCounter
-        })
-    };*/
 
     componentDidMount() {
         console.log('didMount', this);
@@ -70,8 +43,6 @@ class Scanner extends Component {
         };
 
         importPerceptionToolkit();
-
-        // setInterval(this.updateFps, 1000);
     }
 
     componentWillUnmount() {
