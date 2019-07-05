@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  tkpd_qr_code:
+    image: node:10.14.1
+    container_name: tkpd_qr_code 
+    working_dir: /code/
+    volumes:
+      - ./:/code
+    restart: always
+    command: sh -c "yarn start"
+  
+  tkpd_nginx:
+    depends_on:
+      - tkpd_qr_code
+    image: nginx
+    container_name: tkpd_nginx
+    volumes:
+        - ./../public/:/var/www/km
+        - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+        - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    restart: always
+    ports:
+      - 9800:80
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
