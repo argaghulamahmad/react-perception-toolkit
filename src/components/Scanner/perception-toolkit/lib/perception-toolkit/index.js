@@ -130,7 +130,7 @@ const isFunction = func => func && {}.toString.call(func) === '[object Function]
 Handle Marker discovery
 */
 async function onMarkerFound(evt) {
-    alert("WASM SCANNER");
+    // alert("WASM SCANNER");
     console.log('onMarkerFound', evt, this);
 
     // Display barcodeContent to the user.
