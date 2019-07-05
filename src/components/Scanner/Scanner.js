@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {redirectToTokopediaPage} from "./services/services";
 import './Scanner.css'
 import Overlay from "./components/Overlay/Overlay";
-import Animation from "./components/Animation/Animation";
+import ScanningArea from "./components/ScanningArea/ScanningArea";
 
 class Scanner extends Component {
     constructor(props) {
@@ -55,7 +55,7 @@ class Scanner extends Component {
             <div id={'scanner'}>
                 <Overlay message="Arahkan kode QR ke area yang telah ditentukan"/>
                 <div id='stream-capture-container' ref={this.container}>
-                    <Animation/>
+                    <ScanningArea/>
                     <canvas id="capture-canvas"/>
                     <video id="capture-video"/>
                 </div>

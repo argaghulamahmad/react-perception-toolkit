@@ -1,11 +1,11 @@
 import React from 'react';
-import './Animation.css'
+import './ScanningArea.css'
 
-const Animation = () => (
+const ScanningArea = () => (
     <div className="square">
         <div className="square-inner"/>
         <div className="scan"/>
     </div>
 );
 
-export default Animation;
+export default ScanningArea;

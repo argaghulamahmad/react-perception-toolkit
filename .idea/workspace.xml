@@ -4,6 +4,9 @@
     <list default="true" id="83c92675-d3bd-4076-8851-4b0e0e196a62" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Scanner/Scanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/Scanner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Scanner/components/Animation/Animation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/components/ScanningArea/ScanningArea.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Scanner/components/Animation/Animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scanner/components/ScanningArea/ScanningArea.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Scanner/components/ReticleBox/ReticleBox.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,14 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Scanner/Scanner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="96">
+              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Scanner/Scanner.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+            <state relative-caret-position="63">
+              <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -40,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+            <state relative-caret-position="84">
+              <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -57,6 +57,27 @@
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Scanner/components/ScanningArea/ScanningArea.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Scanner/components/ScanningArea/ScanningArea.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -130,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Scanner/scripts/onboarding.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/bootstrap.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/loader.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/main.js" />
@@ -162,8 +182,6 @@
         <option value="$PROJECT_DIR$/src/components/Scanner/components/StreamCapture/StreamCapture.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/Scanner/components/Overlay/Overlay.css" />
-        <option value="$PROJECT_DIR$/src/components/Scanner/components/Animation/Animation.js" />
-        <option value="$PROJECT_DIR$/src/components/Scanner/components/Animation/Animation.css" />
         <option value="$PROJECT_DIR$/src/scripts/benchmark/fps.js" />
         <option value="$PROJECT_DIR$/src/scripts/benchmark/fps-counter.js" />
         <option value="$PROJECT_DIR$/src/components/Home/Home.js" />
@@ -179,8 +197,11 @@
         <option value="$PROJECT_DIR$/node_modules/react-qr-reader/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/components/Overlay/Overlay.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/components/Animation/Animation.js" />
         <option value="$PROJECT_DIR$/src/components/Scanner/Scanner.css" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/components/Animation/Animation.css" />
         <option value="$PROJECT_DIR$/src/components/Scanner/Scanner.js" />
+        <option value="$PROJECT_DIR$/src/components/Scanner/components/ScanningArea/ScanningArea.js" />
       </list>
     </option>
   </component>
@@ -244,15 +265,6 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Scanner" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Animation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactpercept" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Scanner" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Overlay" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -262,7 +274,7 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Scanner" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ReticleBox" type="462c0819:PsiDirectoryNode" />
+              <item name="ScanningArea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="reactpercept" type="b2602c69:ProjectViewProjectNode" />
@@ -403,20 +415,6 @@
       <workItem from="1562234114842" duration="604000" />
       <workItem from="1562293530451" duration="35000" />
       <workItem from="1562293839887" duration="343000" />
-    </task>
-    <task id="LOCAL-00029" summary="Tidy up some comments">
-      <created>1560496917892</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1560496917892</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Rename const load to deviceSupportTest">
-      <created>1560496985965</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1560496985965</updated>
     </task>
     <task id="LOCAL-00031" summary="Add some TODOs and trace some vars">
       <created>1560497499061</created>
@@ -747,24 +745,38 @@
       <option name="project" value="LOCAL" />
       <updated>1562308255456</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Remove unused comment">
+      <created>1562308318540</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1562308318540</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Update animation component">
+      <created>1562308450410</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1562308450410</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225583000" />
+    <option name="totallyTimeSpent" value="225847000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15829694" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15829694" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299285" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32890704" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -858,8 +870,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Disable start button, initialize experience when scanner is open" />
-    <MESSAGE value="Not use stream-capture-template anymore" />
     <MESSAGE value="Fix typo and bugs&#10;Fix typo on close function 'this.root', fix canvas removed bug, and not use vibrate function." />
     <MESSAGE value="Fix bugs caused by refs typo" />
     <MESSAGE value="Clean up index js file&#10;Rearrange codes." />
@@ -883,7 +893,9 @@
     <MESSAGE value="Add fps counter" />
     <MESSAGE value="Add redirect to tokopedia on ScannerJs" />
     <MESSAGE value="Fix reticle and animation size" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix reticle and animation size" />
+    <MESSAGE value="Remove unused comment" />
+    <MESSAGE value="Update animation component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update animation component" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/perception-toolkit/lib/perception-toolkit/bootstrap.js">
@@ -1160,53 +1172,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Scanner/components/ReticleBox/ReticleBox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Scanner/components/Animation/Animation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Scanner/components/Animation/Animation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/perception-toolkit/lib/src/elements/stream-capture/stream-capture.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        <state relative-caret-position="84">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/components/ReticleBox/ReticleBox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/Scanner.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        <state relative-caret-position="63">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Scanner/Scanner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+        <state relative-caret-position="96">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/components/ScanningArea/ScanningArea.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Scanner/components/ScanningArea/ScanningArea.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
